@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Omer Shaik — AI Product Manager</title>
+  <meta name="description" content="Mohammed Omer Shaik — AI Product Manager. I design and ship LLM products end-to-end, across fintech, developer tools, research, and real estate. Six are open-source. Open to roles in the UAE and Canada." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohammed Omer Shaik — AI Product Manager" />
+  <meta property="og:description" content="I design and ship AI products end-to-end — fintech, dev tools, research, real estate. Six open-source. Open to roles in the UAE & Canada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://omershaik.com/" />
+  <link rel="canonical" href="https://omershaik.com/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       PALATE CARD: Modern AI Startup (CANONICAL-3)
+       Color: COLOR-4 Dark-Mode Dominant · Type: TYPE-5 Geometric-Modernist
+       Layout: LAYOUT-3a Marketing-Bento · Motion: MOTION-3 Functional-Snappy
+       Component: COMP-2 Soft-Container · Voice: VOICE-4 Direct Professional
+       ============================================================ */
+    :root {
+      --bg-canvas: #0a0a0a;
+      --bg-surface: #171717;
+      --bg-elevated: #262626;
+      --bg-subtle: #171717;
+      --fg-body: #fafafa;
+      --fg-muted: #a3a3a3;
+      --fg-subtle: #737373;
+      --fg-inverse: #0a0a0a;
+      --accent-primary: #fafafa;
+      --accent-cta: #ffffff;
+      --accent-secondary: #a3a3a3;
+      --border-default: #262626;
+      --border-subtle: #171717;
+      --border-strong: #404040;
+
+      --font-display: 'Inter', 'SF Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Inter', 'SF Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+      --xs: 4px;  --sm: 8px;  --md: 16px;  --lg: 24px;  --xl: 32px;  --2xl: 48px;
+      --touch-min: 44px;
+
+      --r-sm: 4px; --r-md: 8px; --r-lg: 12px; --r-full: 9999px;
+
+      --dur-fast: 150ms; --dur-medium: 250ms; --dur-slow: 400ms;
+      --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+      --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+      --maxw: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      background: var(--bg-canvas);
+      color: var(--fg-body);
+      font-family: var(--font-body);
+      font-size: 1rem; line-height: 1.5;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: var(--fg-body); color: var(--fg-inverse); }
+    :focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; border-radius: var(--r-sm); }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--lg); }
+    .mono { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.02em; color: var(--fg-muted); }
+    .eyebrow { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-subtle); margin-bottom: var(--md); }
+
+    header.nav { position: sticky; top: 0; z-index: 50; background: rgba(10,10,10,0.72); backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid var(--border-default); }
+    .nav-inner { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: var(--md) var(--lg); min-height: var(--touch-min); }
+    .brand { font-weight: 600; letter-spacing: -0.01em; font-size: 1rem; }
+    .brand span { color: var(--fg-subtle); }
+    .nav-links { display: flex; align-items: center; gap: var(--lg); }
+    .nav-links a { font-size: 0.9375rem; color: var(--fg-muted); transition: color var(--dur-fast) var(--ease-standard); min-height: var(--touch-min); display: inline-flex; align-items: center; }
+    .nav-links a:hover { color: var(--fg-body); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sm); min-height: var(--touch-min); padding: var(--sm) var(--lg); border-radius: var(--r-md); font-size: 0.9375rem; font-weight: 500; border: 1px solid transparent; cursor: pointer; transition: background var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard), transform var(--dur-fast) var(--ease-standard); }
+    .btn-primary { background: var(--accent-primary); color: var(--fg-inverse); border-color: var(--accent-primary); }
+    .btn-primary:hover { background: var(--accent-cta); }
+    .btn-secondary { background: transparent; color: var(--fg-body); border-color: var(--border-strong); }
+    .btn-secondary:hover { background: var(--bg-surface); border-color: var(--fg-subtle); }
+    .btn:active { transform: translateY(1px); }
+    @media (max-width: 680px) { .nav-anchor { display: none; } }
+
+    .hero { padding: clamp(72px, 14vw, 140px) 0 var(--2xl); }
+    .hero h1 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; font-size: clamp(2.5rem, 7vw, 4.25rem); max-width: 18ch; }
+    .hero h1 .dim { color: var(--fg-subtle); }
+    .hero .lede { margin-top: var(--lg); max-width: 60ch; font-size: clamp(1.0625rem, 2.4vw, 1.25rem); line-height: 1.55; color: var(--fg-muted); }
+    .avatar { width: 88px; height: 88px; border-radius: var(--r-full); object-fit: cover; border: 1px solid var(--border-strong); margin-bottom: var(--lg); display: block; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
+    .hero-portrait { width: 100%; border-radius: var(--r-lg); border: 1px solid var(--border-strong); object-fit: cover; aspect-ratio: 4 / 5; display: block; }
+    @media (max-width: 760px) {
+      .hero-grid { grid-template-columns: 1fr; gap: var(--xl); }
+      .hero-portrait { max-width: 280px; aspect-ratio: 1 / 1; }
+    }
+    .hero-cta { margin-top: var(--xl); display: flex; gap: var(--md); flex-wrap: wrap; }
+    .status { display: inline-flex; align-items: center; gap: var(--sm); margin-bottom: var(--lg); padding: 6px var(--md); border: 1px solid var(--border-default); border-radius: var(--r-full); font-size: 0.8125rem; color: var(--fg-muted); background: var(--bg-surface); }
+    .dot { width: 7px; height: 7px; border-radius: var(--r-full); background: #4ade80; box-shadow: 0 0 0 3px rgba(74,222,128,0.15); }
+
+    section { padding: clamp(56px, 9vw, 96px) 0; border-top: 1px solid var(--border-default); }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--lg); flex-wrap: wrap; margin-bottom: var(--xl); }
+    .section-head h2 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; font-size: clamp(1.5rem, 4vw, 1.875rem); }
+    .section-head p { color: var(--fg-muted); max-width: 48ch; font-size: 0.9375rem; }
+
+    .bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--md); }
+    .cell { background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--r-lg); padding: var(--lg); display: flex; flex-direction: column; min-height: 200px; transition: border-color var(--dur-medium) var(--ease-standard), background var(--dur-medium) var(--ease-standard), transform var(--dur-medium) var(--ease-decelerate); }
+    .cell:hover { border-color: var(--border-strong); background: #1c1c1c; transform: translateY(-2px); }
+    .cell.x2 { grid-column: span 2; }
+    .cell.feature { grid-column: span 2; grid-row: span 2; }
+    .cell .tags { display: flex; gap: var(--sm); flex-wrap: wrap; margin-bottom: var(--md); }
+    .tag { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.03em; color: var(--fg-muted); border: 1px solid var(--border-default); padding: 3px 8px; border-radius: var(--r-sm); background: var(--bg-canvas); }
+    .cell h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+    .cell.feature h3 { font-size: 1.6rem; }
+    .cell p { color: var(--fg-muted); font-size: 0.9375rem; margin-top: var(--sm); }
+    .cell .spacer { flex: 1; }
+    .cell .meta { margin-top: var(--lg); display: flex; align-items: center; justify-content: space-between; }
+    .cell .role { font-size: 0.8125rem; color: var(--fg-subtle); }
+    .cell .arrow { color: var(--fg-subtle); transition: transform var(--dur-fast) var(--ease-standard), color var(--dur-fast); }
+    .cell:hover .arrow { transform: translate(2px,-2px); color: var(--fg-body); }
+    .stat-row { display: flex; gap: var(--xl); margin-top: var(--md); }
+    .stat .n { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+    .stat .l { font-size: 0.75rem; color: var(--fg-subtle); }
+
+    @media (max-width: 880px) { .bento { grid-template-columns: repeat(2, 1fr); } .cell.feature { grid-column: span 2; grid-row: auto; } .cell.x2 { grid-column: span 2; } }
+    @media (max-width: 520px) { .bento { grid-template-columns: 1fr; } .cell.x2, .cell.feature { grid-column: span 1; } }
+
+    .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--2xl); align-items: start; }
+    .about-grid p { color: var(--fg-muted); font-size: 1.0625rem; line-height: 1.65; margin-bottom: var(--md); max-width: 60ch; }
+    .about-grid p strong { color: var(--fg-body); font-weight: 600; }
+    .panel { background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--r-lg); padding: var(--lg); }
+    .panel h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--fg-subtle); font-family: var(--font-mono); margin-bottom: var(--md); }
+    .chips { display: flex; flex-wrap: wrap; gap: var(--sm); }
+    .panel + .panel { margin-top: var(--md); }
+    @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; gap: var(--xl); } }
+
+    .xp { display: flex; flex-direction: column; }
+    .xp-row { display: grid; grid-template-columns: 150px 1fr; gap: var(--lg); padding: var(--lg) 0; border-top: 1px solid var(--border-default); transition: background var(--dur-fast) var(--ease-standard); }
+    .xp-row:hover { background: var(--bg-surface); }
+    .xp-row .when { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--fg-subtle); padding-top: 3px; }
+    .xp-row .what h3 { font-size: 1.0625rem; font-weight: 600; }
+    .xp-row .what .org { color: var(--fg-muted); font-size: 0.9375rem; }
+    .xp-row .what p { color: var(--fg-muted); font-size: 0.9375rem; margin-top: var(--sm); max-width: 70ch; }
+    @media (max-width: 600px) { .xp-row { grid-template-columns: 1fr; gap: var(--xs); } }
+
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--md); }
+    @media (max-width: 700px) { .edu-grid { grid-template-columns: 1fr; } }
+
+    .contact-card { background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--r-lg); padding: clamp(28px, 6vw, 56px); text-align: center; }
+    .contact-card h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(1.75rem, 5vw, 2.5rem); }
+    .contact-card p { color: var(--fg-muted); margin-top: var(--md); font-size: 1.0625rem; max-width: 46ch; margin-left: auto; margin-right: auto; }
+    .contact-actions { margin-top: var(--xl); display: flex; gap: var(--md); justify-content: center; flex-wrap: wrap; }
+
+    footer { border-top: 1px solid var(--border-default); padding: var(--xl) 0; }
+    .foot-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--md); flex-wrap: wrap; }
+    .foot-inner .mono { font-size: 0.75rem; }
+    .foot-links { display: flex; gap: var(--lg); }
+    .foot-links a { font-size: 0.8125rem; color: var(--fg-muted); transition: color var(--dur-fast); }
+    .foot-links a:hover { color: var(--fg-body); }
+
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity var(--dur-slow) var(--ease-decelerate), transform var(--dur-slow) var(--ease-decelerate); }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Omer Shaik<span> · AI PM</span></a>
+      <nav class="nav-links">
+        <a href="#work" class="nav-anchor">Work</a>
+        <a href="#about" class="nav-anchor">About</a>
+        <a href="#experience" class="nav-anchor">Experience</a>
+        <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="nav-anchor">GitHub</a>
+        <a href="mailto:mohammed@omershaik.com" class="btn btn-primary">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" style="border-top:none">
+      <div class="hero-grid reveal">
+        <div>
+          <span class="status"><span class="dot"></span> Open to AI Product Manager roles · UAE &amp; Canada · open to relocate</span>
+          <h1>I turn ideas into AI products <span class="dim">— from the first prompt to production.</span></h1>
+          <p class="lede">
+            I&rsquo;m Mohammed Omer Shaik, an AI product manager and founder. I take a one-line idea to a working
+            build &mdash; the PRD, the architecture, then shipping with AI coding tools &mdash; and I do it across
+            domains: a crypto-intelligence agent, an open-source developer tool, a research generator, a marketing
+            pipeline, and property-trust infrastructure. Six are open-source. Have a look.
+          </p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary">View selected work</a>
+            <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">GitHub &rarr;</a>
+            <a href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn &rarr;</a>
+          </div>
+        </div>
+        <div>
+          <img class="hero-portrait" src="omer.jpg" alt="Mohammed Omer Shaik" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORK (BENTO) ================= -->
+    <section id="work">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">01 / Selected work</p>
+          <h2>Six products, five domains, one method</h2>
+        </div>
+        <p>Each built spec-first &mdash; PRD, architecture, then a working build assembled with AI coding tools. All six are public on GitHub.</p>
+      </div>
+
+      <div class="bento reveal">
+
+        <!-- Feature: LaserEyedBen -->
+        <a href="https://github.com/omershaik/LaserEyedBen" target="_blank" rel="noopener" class="cell feature">
+          <div class="tags"><span class="tag">Fintech</span><span class="tag">AI Agents</span><span class="tag">Founder &amp; Builder</span></div>
+          <h3>LaserEyedBen</h3>
+          <p>An autonomous crypto-intelligence agent that ran live on X, paired with a Solana token. Sixteen data sources flow into a GPT-4, event-driven pipeline. Its defining decision: migrating storage from PostgreSQL to a hybrid Postgres&nbsp;+&nbsp;Weaviate vector store so the system could reason over similarity, not just records.</p>
+          <div class="stat-row">
+            <div class="stat"><div class="n">~16</div><div class="l">data sources</div></div>
+            <div class="stat"><div class="n">85%</div><div class="l">cache hit</div></div>
+            <div class="stat"><div class="n">&lt;1.5s</div><div class="l">responses</div></div>
+          </div>
+          <div class="spacer"></div>
+          <div class="meta"><span class="role">Built &amp; run in production · full case study in repo</span><span class="arrow">&#8599;</span></div>
+        </a>
+
+        <!-- Lorenth -->
+        <a href="https://github.com/omershaik/Lorenth" target="_blank" rel="noopener" class="cell x2">
+          <div class="tags"><span class="tag">Applied AI</span><span class="tag">Research</span></div>
+          <h3>Lorenth</h3>
+          <p>A research-intelligence platform that turns a question into a structured, sourced report &mdash; plan, gather (Perplexity + live data), synthesize with Claude, export to doc, deck or PDF. FastAPI + React. Taken from PRD v1 through v2.1.</p>
+          <div class="spacer"></div>
+          <div class="meta"><span class="role">Product &amp; architecture</span><span class="arrow">&#8599;</span></div>
+        </a>
+
+        <!-- Palate -->
+        <a href="https://github.com/omershaik/Palate" target="_blank" rel="noopener" class="cell">
+          <div class="tags"><span class="tag">Open Source</span><span class="tag">Dev Tools</span></div>
+          <h3>Palate</h3>
+          <p>An open-source MCP server that gives AI coding tools a structured design vocabulary, so generated sites land in named registers instead of AI-default sameness. <em style="color:var(--fg-subtle)">This site was built with it.</em></p>
+          <div class="spacer"></div>
+          <div class="meta"><span class="role">Creator</span><span class="arrow">&#8599;</span></div>
+        </a>
+
+        <!-- Restaurantpeer -->
+        <a href="https://github.com/omershaik/Restaurantpeer" target="_blank" rel="noopener" class="cell">
+          <div class="tags"><span class="tag">Marketing</span><span class="tag">Automation</span></div>
+          <h3>Restaurantpeer</h3>
+          <p>An end-to-end agentic pipeline: scrape a city&rsquo;s restaurants, pick a hero photo, sample a brand palette from it, and generate an on-brand social post &mdash; runs start to finish without API keys.</p>
+          <div class="spacer"></div>
+          <div class="meta"><span class="role">Builder</span><span class="arrow">&#8599;</span></div>
+        </a>
+
+        <!-- PropertyLedger -->
+        <a href="https://github.com/omershaik/PropertyLedger" target="_blank" rel="noopener" class="cell x2">
+          <div class="tags"><span class="tag">PropTech</span><span class="tag">Web3</span></div>
+          <h3>PropertyLedger</h3>
+          <p>Trust infrastructure for real estate &mdash; a 47-point title/legal audit produces a 0&ndash;1000 Trust Score and tamper-proof, on-chain-verifiable certificates. Architected to stay valid as land records move on-chain.</p>
+          <div class="spacer"></div>
+          <div class="meta"><span class="role">Founder &amp; Product Lead</span><span class="arrow">&#8599;</span></div>
+        </a>
+
+        <!-- PARCEL -->
+        <a href="https://github.com/omershaik/PARCEL" target="_blank" rel="noopener" class="cell x2">
+          <div class="tags"><span class="tag">Data</span><span class="tag">PropTech</span></div>
+          <h3>PARCEL</h3>
+          <p>Turns official Dubai Land Department and RERA data into developer trust scores and project intelligence &mdash; Next.js + Python pipelines, with an honest line between verified data and what needs B2B access.</p>
+          <div class="spacer"></div>
+          <div class="meta"><span class="role">Product &amp; data</span><span class="arrow">&#8599;</span></div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">02 / About</p>
+          <h2>The method, not the market</h2>
+        </div>
+      </div>
+
+      <div class="about-grid reveal">
+        <div>
+          <p>
+            I&rsquo;m a <strong>product manager who builds</strong>. I move from a one-line idea to a PRD, to an
+            architecture, to something you can actually click &mdash; assembled with AI coding tools (Claude Code,
+            Cursor, Codex, Gemini) and a working command of Python. My edge isn&rsquo;t hand-writing production code;
+            it&rsquo;s <strong>compressing the distance between an idea and a working product</strong>.
+          </p>
+          <p>
+            The range is deliberate. I&rsquo;ve shipped a crypto-intelligence agent, an open-source developer tool,
+            an AI research generator, a marketing automation pipeline, and property-trust infrastructure. The common
+            thread isn&rsquo;t an industry &mdash; it&rsquo;s <strong>taking a messy real-world problem, designing the
+            product, and getting a working version into people&rsquo;s hands fast</strong>.
+          </p>
+          <p>
+            I also operate in the real world: I co-founded <strong>Orion Ventures</strong> (real-estate development)
+            and I&rsquo;m building my own venture, <strong>Virsa</strong>. That mix &mdash; running a business and
+            shipping AI products &mdash; is what I want to bring to an <strong>AI Product Manager</strong> role.
+          </p>
+        </div>
+
+        <div>
+          <div class="panel">
+            <h4>Focus</h4>
+            <div class="chips">
+              <span class="tag">AI Product Management</span>
+              <span class="tag">LLM Products</span>
+              <span class="tag">RAG &amp; Agents</span>
+              <span class="tag">Prompt &amp; Context Engineering</span>
+              <span class="tag">0&rarr;1 Prototyping</span>
+              <span class="tag">Product Strategy</span>
+              <span class="tag">Evals / LLMOps</span>
+            </div>
+          </div>
+          <div class="panel">
+            <h4>Tools I build with</h4>
+            <div class="chips">
+              <span class="tag">Claude Code</span>
+              <span class="tag">Cursor</span>
+              <span class="tag">Codex</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">Python</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Postgres + Weaviate</span>
+            </div>
+          </div>
+          <div class="panel">
+            <h4>Also building</h4>
+            <div class="chips">
+              <span class="tag">Orion Ventures &mdash; Co-Founder</span>
+              <span class="tag">Virsa &mdash; Founder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">03 / Experience</p>
+          <h2>The path here</h2>
+        </div>
+        <p>From founding a city&rsquo;s first online marketplace at 22 to shipping AI products today.</p>
+      </div>
+
+      <div class="xp reveal">
+        <div class="xp-row">
+          <div class="when">2024 &mdash; Present</div>
+          <div class="what">
+            <h3>Co-Founder <span class="org">· Orion Ventures</span></h3>
+            <p>Real-estate development company behind Orion Raga (Kalgi) and Orion One Green Park (Malgatti, Gulbarga). Lead proposals, market &amp; site analysis, design and governance, and brand; build the internal AI tools and dashboards.</p>
+          </div>
+        </div>
+        <div class="xp-row">
+          <div class="when">In development</div>
+          <div class="what">
+            <h3>Founder <span class="org">· Virsa</span></h3>
+            <p>My own development venture &mdash; proposals, a township design-control governance playbook, brand identity, and an AI-built operations dashboard.</p>
+          </div>
+        </div>
+        <div class="xp-row">
+          <div class="when">2023</div>
+          <div class="what">
+            <h3>Customer Relationship Representative (Co-op) <span class="org">· Elite Mobility Mfg., Mississauga</span></h3>
+            <p>Co-op term during the AI &amp; Machine Learning program at Lambton College.</p>
+          </div>
+        </div>
+        <div class="xp-row">
+          <div class="when">2023</div>
+          <div class="what">
+            <h3>Operations <span class="org">· Majorel, Canada</span></h3>
+            <p>Short post-studies engagement in a structured operations environment.</p>
+          </div>
+        </div>
+        <div class="xp-row">
+          <div class="when">2017 &mdash; 2022</div>
+          <div class="what">
+            <h3>Co-Founder &amp; Franchise Owner <span class="org">· Lassi Magic, Gulbarga</span></h3>
+            <p>Bought and ran a food franchise; sold the business before relocating to Canada in 2022.</p>
+          </div>
+        </div>
+        <div class="xp-row">
+          <div class="when">2017 &mdash; 2021</div>
+          <div class="what">
+            <h3>Independent Crypto Investor &amp; Researcher</h3>
+            <p>Self-directed trading, investing, and on-chain research &mdash; the foundation for later crypto-AI products.</p>
+          </div>
+        </div>
+        <div class="xp-row">
+          <div class="when">Dec 2017 &mdash; May 2018</div>
+          <div class="what">
+            <h3>Ad Operations Specialist <span class="org">· Yahoo</span></h3>
+            <p>Ad operations and campaign delivery in a digital advertising environment.</p>
+          </div>
+        </div>
+        <div class="xp-row">
+          <div class="when">2015 &mdash; 2016</div>
+          <div class="what">
+            <h3>Co-Founder &amp; CEO <span class="org">· Instazop</span></h3>
+            <p>Gulbarga&rsquo;s first online grocery-delivery marketplace. Ideated the product end-to-end &mdash; website, wireframes, business model, go-to-market &mdash; and ran operations, marketing and a small team, reaching ~60% repeat customers early on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">04 / Education</p>
+          <h2>Education &amp; credentials</h2>
+        </div>
+      </div>
+      <div class="edu-grid reveal">
+        <div class="panel">
+          <h4>Ontario College Graduate Certificate</h4>
+          <h3 style="font-size:1.0625rem;font-weight:600;margin-bottom:6px">AI &amp; Machine Learning</h3>
+          <p style="color:var(--fg-muted);font-size:0.9375rem">Lambton College, Canada · 2022&ndash;2023. Projects in financial-tweet sentiment analysis, news summarization, and credit-card fraud detection.</p>
+        </div>
+        <div class="panel">
+          <h4>Bachelor of Engineering</h4>
+          <h3 style="font-size:1.0625rem;font-weight:600;margin-bottom:6px">Computer Science &amp; Engineering</h3>
+          <p style="color:var(--fg-muted);font-size:0.9375rem">P.D.A. College of Engineering, Gulbarga · 2017.</p>
+        </div>
+        <div class="panel" style="grid-column:1/-1">
+          <h4>Certifications</h4>
+          <div class="chips">
+            <span class="tag">AI in Fintech &mdash; LinkedIn</span>
+            <span class="tag">Blockchain Basics &mdash; LinkedIn</span>
+            <span class="tag">Digital Marketing &mdash; DigitalDeepak</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow" style="justify-content:center">05 / Contact</p>
+        <h2>Let&rsquo;s build something worth shipping.</h2>
+        <p>Open to AI Product Manager roles and collaborations &mdash; in the UAE, Canada, or remote. I reply to everything.</p>
+        <div class="contact-actions">
+          <a href="mailto:mohammed@omershaik.com" class="btn btn-primary">mohammed@omershaik.com</a>
+          <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">GitHub &rarr;</a>
+          <a href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap foot-inner">
+      <span class="mono">© 2026 Mohammed Omer Shaik</span>
+      <div class="foot-links">
+        <a href="mailto:mohammed@omershaik.com">Email</a>
+        <a href="https://github.com/omershaik" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#top">Back to top</a>
+      </div>
+      <a href="https://github.com/omershaik/Palate" target="_blank" rel="noopener" class="mono">Styled with Palate · Modern AI Startup</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
