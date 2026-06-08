@@ -59,6 +59,7 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; max-width: 100%; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
     body {
@@ -89,10 +90,19 @@
     .btn-secondary { background: transparent; color: var(--fg-body); border-color: var(--border-strong); }
     .btn-secondary:hover { background: var(--bg-surface); border-color: var(--fg-subtle); }
     .btn:active { transform: translateY(1px); }
-    @media (max-width: 680px) { .nav-anchor { display: none; } }
+    .nav-toggle { display: none; background: none; border: 1px solid var(--border-strong); border-radius: var(--r-md); width: 44px; height: 44px; align-items: center; justify-content: center; color: var(--fg-body); cursor: pointer; }
+    .nav-toggle svg { width: 20px; height: 20px; }
+    @media (max-width: 680px) {
+      .nav-inner { position: relative; }
+      .nav-toggle { display: inline-flex; }
+      .nav-links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: var(--sm) var(--lg) var(--md); background: var(--bg-surface); border-bottom: 1px solid var(--border-default); display: none; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: var(--sm) 0; }
+      .nav-links .btn { margin-top: var(--sm); width: 100%; }
+    }
 
     .hero { padding: clamp(72px, 14vw, 140px) 0 var(--2xl); }
-    .hero h1 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; font-size: clamp(2.5rem, 7vw, 4.25rem); max-width: 18ch; }
+    .hero h1 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; font-size: clamp(2.05rem, 7vw, 4.25rem); max-width: 18ch; overflow-wrap: break-word; }
     .hero h1 .dim { color: var(--fg-subtle); }
     .hero .lede { margin-top: var(--lg); max-width: 60ch; font-size: clamp(1.0625rem, 2.4vw, 1.25rem); line-height: 1.55; color: var(--fg-muted); }
     .avatar { width: 88px; height: 88px; border-radius: var(--r-full); object-fit: cover; border: 1px solid var(--border-strong); margin-bottom: var(--lg); display: block; }
@@ -126,7 +136,7 @@
     .cell .role { font-size: 0.8125rem; color: var(--fg-subtle); }
     .cell .arrow { color: var(--fg-subtle); transition: transform var(--dur-fast) var(--ease-standard), color var(--dur-fast); }
     .cell:hover .arrow { transform: translate(2px,-2px); color: var(--fg-body); }
-    .stat-row { display: flex; gap: var(--xl); margin-top: var(--md); }
+    .stat-row { display: flex; flex-wrap: wrap; gap: clamp(var(--md), 4vw, var(--xl)); margin-top: var(--md); }
     .stat .n { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
     .stat .l { font-size: 0.75rem; color: var(--fg-subtle); }
 
@@ -177,6 +187,9 @@
   <header class="nav">
     <div class="nav-inner">
       <a href="#top" class="brand">Omer Shaik<span> · AI PM</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <nav class="nav-links">
         <a href="#work" class="nav-anchor">Work</a>
         <a href="#about" class="nav-anchor">About</a>
@@ -484,6 +497,18 @@
   </footer>
 
   <script>
+    (function () {
+      var t = document.querySelector('.nav-toggle'), m = document.querySelector('.nav-links');
+      if (t && m) {
+        t.addEventListener('click', function () {
+          var open = m.classList.toggle('open');
+          t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        m.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); });
+        });
+      }
+    })();
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var els = document.querySelectorAll('.reveal');
