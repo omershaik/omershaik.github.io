@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room — Contribution Optimizer</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #fdfcfa;
+    --card: #ffffff;
+    --gold: #b8860b;
+    --accent: #2f5d50;
+    --tfsa: #2f5d50;
+    --rrsp: #b8860b;
+    --fhsa: #4a6fa5;
+    --muted: #767370;
+    --line: #e8e5e0;
+    --good: #2f7d4f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--paper); color: var(--ink);
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 40px 0 8px; }
+  .badge {
+    display: inline-block; font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--muted); border: 1px solid var(--line); border-radius: 100px; padding: 5px 14px; margin-bottom: 18px;
+  }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; font-size: clamp(30px, 4.5vw, 46px); letter-spacing: -0.5px; }
+  .sub { color: var(--muted); font-size: 17px; max-width: 560px; margin-top: 10px; }
+  main { display: grid; grid-template-columns: 400px 1fr; gap: 28px; padding: 36px 0 80px; align-items: start; }
+  @media (max-width: 880px) { main { grid-template-columns: 1fr; } }
+
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
+  .panel h2 { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 20px; }
+  .field { margin-bottom: 18px; }
+  .field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .field .hint { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  input[type=number], select {
+    width: 100%; padding: 11px 13px; font-size: 15px; border: 1px solid var(--line);
+    border-radius: 10px; background: var(--paper); color: var(--ink); font-family: inherit;
+  }
+  input:focus, select:focus { outline: 2px solid var(--ink); border-color: transparent; }
+  .toggle-row { display: flex; gap: 8px; }
+  .toggle-row button {
+    flex: 1; padding: 10px; border: 1px solid var(--line); background: var(--paper);
+    border-radius: 10px; font-size: 14px; cursor: pointer; font-family: inherit;
+  }
+  .toggle-row button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  details { margin-top: 4px; }
+  summary { font-size: 13px; color: var(--muted); cursor: pointer; margin-bottom: 12px; }
+
+  .headline { background: var(--ink); color: #fff; border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+  .headline .lede { font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; opacity: .65; margin-bottom: 8px; }
+  .headline .big { font-family: Georgia, serif; font-size: 30px; line-height: 1.25; }
+  .headline .big em { font-style: normal; color: #e9c46a; }
+
+  .bar { display: flex; height: 46px; border-radius: 12px; overflow: hidden; margin: 20px 0 10px; }
+  .bar div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 13px; font-weight: 600; min-width: 0; white-space: nowrap; overflow: hidden; transition: width .4s ease; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .legend span::before { content: ''; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; }
+  .legend .l-fhsa::before { background: var(--fhsa); } .legend .l-rrsp::before { background: var(--rrsp); } .legend .l-tfsa::before { background: var(--tfsa); }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-top: 20px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  .stat .k { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; }
+  .stat .v { font-family: Georgia, serif; font-size: 26px; }
+  .stat .v.green { color: var(--good); }
+
+  .why { margin-top: 24px; }
+  .why h3 { font-family: Georgia, serif; font-size: 20px; font-weight: 500; margin-bottom: 12px; }
+  .step { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .step:last-child { border-bottom: none; }
+  .step .n {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--paper);
+    border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700;
+  }
+  .step p { font-size: 14px; color: #3d3b38; }
+  .step p strong { color: var(--ink); }
+  footer { border-top: 1px solid var(--line); padding: 22px 0 44px; font-size: 12px; color: var(--muted); }
+  footer p { max-width: 720px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+      <div class="badge">Room · Concept prototype</div>
+      <nav style="font-size:13px">
+        <span style="font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:2px">1 · Optimize</span>
+        <span style="color:var(--muted);margin:0 6px">→</span>
+        <a href="noa-scanner.html" style="color:var(--muted);text-decoration:none">2 · AI room import</a>
+      </nav>
+    </div>
+    <h1>Where should your next dollar go?</h1>
+    <p class="sub">Canada gives you three tax-advantaged accounts. Most people guess. This tool does the math — using 2026 CRA limits and your marginal tax rate.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>About you</h2>
+      <div class="field">
+        <label for="income">Annual income (pre-tax)</label>
+        <input type="number" id="income" value="85000" step="1000" min="0">
+      </div>
+      <div class="field">
+        <label for="monthly">Monthly amount to invest</label>
+        <input type="number" id="monthly" value="800" step="50" min="0">
+      </div>
+      <div class="field">
+        <label for="province">Province</label>
+        <select id="province">
+          <option value="ON" selected>Ontario</option>
+          <option value="BC">British Columbia</option>
+          <option value="AB">Alberta</option>
+          <option value="QC">Quebec</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>First-time home buyer?</label>
+        <div class="toggle-row">
+          <button id="fhsaYes" class="on" onclick="setFhsa(true)">Yes, saving for a home</button>
+          <button id="fhsaNo" onclick="setFhsa(false)">No</button>
+        </div>
+        <div class="hint">FHSA: deduct like an RRSP, withdraw tax-free like a TFSA.</div>
+      </div>
+      <div class="field">
+        <label>Employer RRSP match?</label>
+        <div class="toggle-row">
+          <button id="matchYes" onclick="setMatch(true)">Yes</button>
+          <button id="matchNo" class="on" onclick="setMatch(false)">No</button>
+        </div>
+        <div class="hint" id="matchHint" style="display:none">We assume a common 3%-of-salary match. Free money always comes first.</div>
+      </div>
+      <a href="noa-scanner.html" style="display:block;text-align:center;background:var(--paper);border:1px solid var(--ink);border-radius:10px;padding:11px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;margin-bottom:14px">✨ Don't know your room? Scan your NOA →</a>
+      <details>
+        <summary>Adjust my contribution room (optional)</summary>
+        <div class="field">
+          <label for="tfsaRoom">TFSA room remaining</label>
+          <input type="number" id="tfsaRoom" value="7000" step="500" min="0">
+          <div class="hint">2026 annual limit: $7,000. Lifetime max since 2009: $109,000.</div>
+        </div>
+        <div class="field">
+          <label for="rrspRoom">RRSP room remaining</label>
+          <input type="number" id="rrspRoom" value="15000" step="500" min="0">
+          <div class="hint">18% of last year's income, 2026 cap $33,810, plus carry-forward.</div>
+        </div>
+        <div class="field">
+          <label for="fhsaRoom">FHSA room remaining (this year)</label>
+          <input type="number" id="fhsaRoom" value="8000" step="500" min="0" max="8000">
+          <div class="hint">$8,000/year, $40,000 lifetime.</div>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <div class="headline">
+        <div class="lede">Your plan for 2026</div>
+        <div class="big" id="headlineText"></div>
+      </div>
+
+      <div class="legend">
+        <span class="l-fhsa">FHSA</span><span class="l-rrsp">RRSP</span><span class="l-tfsa">TFSA</span>
+      </div>
+      <div class="bar" id="bar"></div>
+
+      <div class="cards">
+        <div class="stat"><div class="k">Marginal tax rate</div><div class="v" id="mtr">—</div></div>
+        <div class="stat"><div class="k">Est. tax refund</div><div class="v green" id="refund">—</div></div>
+        <div class="stat"><div class="k">Annual invested</div><div class="v" id="annual">—</div></div>
+        <div class="stat"><div class="k">Value in 10 yrs*</div><div class="v" id="future">—</div></div>
+      </div>
+
+      <div class="why panel" style="margin-top:24px">
+        <h3>Why this order</h3>
+        <div id="steps"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Concept prototype by Mohammed Omer Shaik</strong> — a personal fintech product concept. Uses 2026 CRA limits (TFSA $7,000 · RRSP $33,810 cap · FHSA $8,000/yr) and approximate combined federal + provincial marginal rates. *10-year projection assumes 6% annual return, monthly compounding, refunds not reinvested. Not affiliated with any financial institution. This is not financial or tax advice.</p>
+  </footer>
+</div>
+
+<script>
+// Approximate 2026 combined federal + provincial marginal rate tables (ordinary income).
+// Federal 2026: 14% to $58,523 | 20.5% to $117,045 | 26% to ~$181,440 | 29% to $258,482 | 33% above.
+const RATES = {
+  ON: [[53891,.1905],[58523,.2415],[107785,.2965],[117045,.3148],[150000,.3791],[181440,.4341],[220000,.4497],[258482,.4829],[Infinity,.5353]],
+  BC: [[49279,.1970],[58523,.2270],[98560,.2820],[113158,.3100],[117045,.3450],[137407,.3870],[181440,.4120],[186306,.4370],[Infinity,.5350]],
+  AB: [[58523,.2400],[117045,.3050],[148269,.3600],[177922,.3800],[181440,.4100],[237230,.4232],[258482,.4300],[Infinity,.4800]],
+  QC: [[53255,.2653],[58523,.3153],[106495,.3712],[117045,.4171],[129590,.4546],[181440,.4746],[258482,.5031],[Infinity,.5331]]
+};
+
+let isFhsa = true, hasMatch = false;
+
+function setFhsa(v){ isFhsa=v; sync('fhsaYes','fhsaNo',v); calc(); }
+function setMatch(v){ hasMatch=v; sync('matchYes','matchNo',v);
+  document.getElementById('matchHint').style.display = v ? 'block':'none'; calc(); }
+function sync(a,b,v){
+  document.getElementById(a).classList.toggle('on', v);
+  document.getElementById(b).classList.toggle('on', !v);
+}
+function marginalRate(income, prov){
+  for (const [cap, rate] of RATES[prov]) if (income <= cap) return rate;
+}
+const fmt = n => '$' + Math.round(n).toLocaleString('en-CA');
+const num = id => Math.max(0, +document.getElementById(id).value || 0);
+
+function calc(){
+  const income = num('income'), monthly = num('monthly'), prov = document.getElementById('province').value;
+  const annual = monthly * 12;
+  const mtr = marginalRate(income, prov);
+  let tfsaRoom = num('tfsaRoom'), rrspRoom = num('rrspRoom'), fhsaRoom = Math.min(num('fhsaRoom'), 8000);
+
+  let remaining = annual, alloc = {fhsa:0, rrsp:0, tfsa:0}, steps = [];
+  const HIGH_RATE = 0.30; // above ~30% marginal, RRSP deferral beats TFSA for most savers
+
+  // 1. Employer match — free money first
+  if (hasMatch && remaining > 0 && rrspRoom > 0){
+    const matchAmt = Math.min(income * 0.03, remaining, rrspRoom);
+    alloc.rrsp += matchAmt; remaining -= matchAmt; rrspRoom -= matchAmt;
+    steps.push(`<strong>Capture your employer match first (${fmt(matchAmt)} → RRSP).</strong> A typical match is an instant 100% return. Nothing else in finance beats it.`);
+  }
+  // 2. FHSA — deduct like RRSP, withdraw tax-free like TFSA
+  if (isFhsa && remaining > 0 && fhsaRoom > 0){
+    const amt = Math.min(fhsaRoom, remaining);
+    alloc.fhsa += amt; remaining -= amt;
+    steps.push(`<strong>${fmt(amt)} → FHSA.</strong> It's the only account with both benefits: the contribution is deductible at your ${(mtr*100).toFixed(1)}% marginal rate <em>and</em> the withdrawal for a first home is tax-free. Strictly better than RRSP or TFSA while you have room.`);
+  }
+  // 3. RRSP vs TFSA by marginal rate
+  if (remaining > 0){
+    if (mtr >= HIGH_RATE && rrspRoom > 0){
+      const amt = Math.min(rrspRoom, remaining);
+      alloc.rrsp += amt; remaining -= amt; rrspRoom -= amt;
+      steps.push(`<strong>${fmt(amt)} → RRSP.</strong> At ${(mtr*100).toFixed(1)}%, every $1,000 contributed returns ~${fmt(1000*mtr)} at tax time. You'll likely withdraw in retirement at a lower rate — that spread is the win.`);
+    } else if (mtr < HIGH_RATE) {
+      steps.push(`<strong>TFSA before RRSP at your income.</strong> Your ${(mtr*100).toFixed(1)}% marginal rate is modest — save RRSP room for higher-earning years, when each deduction is worth more.`);
+    }
+  }
+  if (remaining > 0 && tfsaRoom > 0){
+    const amt = Math.min(tfsaRoom, remaining);
+    alloc.tfsa += amt; remaining -= amt; tfsaRoom -= amt;
+    steps.push(`<strong>${fmt(amt)} → TFSA.</strong> Growth and withdrawals are never taxed, and the room comes back the year after you withdraw. Maximum flexibility.`);
+  }
+  if (remaining > 0 && mtr < HIGH_RATE && rrspRoom > 0){
+    const amt = Math.min(rrspRoom, remaining);
+    alloc.rrsp += amt; remaining -= amt;
+    steps.push(`<strong>${fmt(amt)} → RRSP.</strong> TFSA room is used up, so tax-deferred beats a taxable account.`);
+  }
+  if (remaining > 0){
+    steps.push(`<strong>${fmt(remaining)} left over.</strong> Registered room is maxed — impressive. A non-registered account is next; consider Canadian dividends and capital gains for better tax treatment.`);
+  }
+
+  // Refund = deductible contributions × marginal rate
+  const refund = (alloc.rrsp + alloc.fhsa) * mtr;
+
+  // 10-yr FV of monthly contributions at 6%
+  const r = 0.06/12, n = 120;
+  const fv = monthly * ((Math.pow(1+r,n)-1)/r);
+
+  // Render
+  document.getElementById('mtr').textContent = (mtr*100).toFixed(1) + '%';
+  document.getElementById('refund').textContent = fmt(refund) + '/yr';
+  document.getElementById('annual').textContent = fmt(annual);
+  document.getElementById('future').textContent = fmt(fv);
+
+  const bar = document.getElementById('bar'); bar.innerHTML = '';
+  const total = alloc.fhsa + alloc.rrsp + alloc.tfsa || 1;
+  const COLORS = {fhsa:'var(--fhsa)', rrsp:'var(--rrsp)', tfsa:'var(--tfsa)'};
+  for (const k of ['fhsa','rrsp','tfsa']){
+    if (alloc[k] > 0){
+      const d = document.createElement('div');
+      d.style.width = (alloc[k]/total*100) + '%';
+      d.style.background = COLORS[k];
+      d.textContent = k.toUpperCase() + ' ' + fmt(alloc[k]);
+      bar.appendChild(d);
+    }
+  }
+  if (total === 1) bar.innerHTML = '<div style="width:100%;background:var(--line);color:var(--muted)">Enter a monthly amount</div>';
+
+  const parts = [];
+  if (alloc.fhsa) parts.push(`<em>${fmt(alloc.fhsa)}</em> to your FHSA`);
+  if (alloc.rrsp) parts.push(`<em>${fmt(alloc.rrsp)}</em> to your RRSP`);
+  if (alloc.tfsa) parts.push(`<em>${fmt(alloc.tfsa)}</em> to your TFSA`);
+  const joined = parts.length <= 1 ? parts.join('')
+    : parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+  document.getElementById('headlineText').innerHTML = parts.length
+    ? joined + ` — and about <em>${fmt(refund)}</em> back at tax time.`
+    : 'Tell us how much you can invest each month.';
+
+  document.getElementById('steps').innerHTML = steps.map((s,i)=>
+    `<div class="step"><div class="n">${i+1}</div><p>${s}</p></div>`).join('');
+}
+
+document.querySelectorAll('input, select').forEach(el => el.addEventListener('input', calc));
+
+// Accept values imported from the NOA Scanner (noa-scanner.html)
+(function(){
+  const q = new URLSearchParams(location.search);
+  if (q.get('src') === 'noa'){
+    if (q.get('income'))   document.getElementById('income').value   = q.get('income');
+    if (q.get('rrspRoom')) document.getElementById('rrspRoom').value = q.get('rrspRoom');
+    if (q.get('tfsaRoom')) document.getElementById('tfsaRoom').value = q.get('tfsaRoom');
+    const banner = document.createElement('div');
+    banner.style.cssText = 'background:#e5f0e9;border:1px solid #bcd8c6;border-radius:12px;padding:12px 16px;font-size:13px;color:#2f7d4f;margin:16px 0 0';
+    banner.innerHTML = '<strong>✓ Imported from your Notice of Assessment.</strong> Income and RRSP room were read by AI — review anytime in the panel on the left.';
+    document.querySelector('header').appendChild(banner);
+  }
+})();
+calc();
+</script>
+</body>
+</html>

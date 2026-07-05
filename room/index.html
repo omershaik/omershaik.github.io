@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room — a fintech product concept by Mohammed Omer Shaik</title>
+<meta name="description" content="A two-part fintech concept: an optimizer that answers Canada's TFSA-vs-RRSP-vs-FHSA question, and an AI scanner that reads contribution room from a CRA Notice of Assessment.">
+<meta property="og:title" content="Room — where should your next dollar go?">
+<meta property="og:description" content="A working fintech product concept: contribution optimization + AI document extraction. Built by Mohammed Omer Shaik.">
+<meta property="og:type" content="website">
+<style>
+  :root{--ink:#1a1a1a;--paper:#fdfcfa;--card:#fff;--muted:#767370;--line:#e8e5e0;--green:#2f5d50;--gold:#b8860b;--blue:#4a6fa5}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Helvetica Neue',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  .hero{background:var(--ink);color:#fff;padding:72px 0 64px}
+  .hero .badge{display:inline-block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#9b968e;border:1px solid #3a3a3a;border-radius:100px;padding:5px 14px;margin-bottom:22px}
+  .hero h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(34px,5vw,52px);letter-spacing:-.5px;line-height:1.15}
+  .hero h1 em{font-style:normal;color:#e9c46a}
+  .hero p{color:#d8d4cd;font-size:18px;max-width:620px;margin-top:18px}
+  .cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+  .btn{display:inline-block;background:#fff;color:var(--ink);border-radius:100px;padding:13px 26px;font-size:15px;font-weight:600;text-decoration:none}
+  .btn.ghost{background:transparent;color:#fff;border:1px solid #555}
+  section{padding:56px 0 8px}
+  h2{font-family:Georgia,serif;font-weight:500;font-size:28px;margin-bottom:16px}
+  .lead{font-size:16.5px;max-width:680px;color:#3d3b38}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+  @media(max-width:720px){.two{grid-template-columns:1fr}}
+  .prod{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+  .prod .num{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .prod h3{font-family:Georgia,serif;font-size:21px;font-weight:500;margin-bottom:10px}
+  .prod p{font-size:14px;color:#3d3b38;flex:1}
+  .prod a{display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--ink)}
+  .decisions{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;margin-top:28px}
+  .d-row{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .d-row:last-child{border-bottom:none}
+  .d-row .n{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+  .d-row p{font-size:14px;color:#3d3b38}
+  .d-row p strong{color:var(--ink)}
+  footer{border-top:1px solid var(--line);margin-top:64px;padding:26px 0 48px;font-size:13px;color:var(--muted)}
+  footer a{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="badge">Product concept · Working prototype</div>
+    <h1>Where should your<br>next dollar go?</h1>
+    <p>Canada gives every saver three tax-advantaged accounts — TFSA, RRSP, FHSA — and no help choosing between them. <em style="color:#e9c46a">Room</em> is a two-part product concept that answers the question, then removes the friction that would stop people from asking it.</p>
+    <div class="cta">
+      <a class="btn" href="contribution-optimizer.html">Try the Optimizer →</a>
+      <a class="btn ghost" href="noa-scanner.html">Try the AI Scanner →</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2>The problem</h2>
+    <p class="lead">The right split across TFSA, RRSP, and FHSA depends on marginal tax rate, home-buying intent, employer matching, and CRA contribution room. Getting it wrong costs real refund dollars every year — over-contributing triggers a 1%/month CRA penalty. Yet most people guess, default to whichever account they opened first, or leave the money in chequing. Canadian fintechs execute trades brilliantly; almost none help with this decision.</p>
+  </section>
+
+  <section>
+    <h2>What I built</h2>
+    <div class="two">
+      <div class="prod">
+        <div class="num">Product 1</div>
+        <h3>Contribution Optimizer</h3>
+        <p>Enter income, monthly savings, province, and home plans — get an explainable allocation waterfall built on 2026 CRA limits and per-province combined marginal rates. Every step carries its "why": employer match first, FHSA if home-buying, RRSP vs TFSA decided by marginal rate. Refund estimate and 10-year projection included.</p>
+        <a href="contribution-optimizer.html">Open the Optimizer →</a>
+      </div>
+      <div class="prod">
+        <div class="num">Product 2 · AI</div>
+        <h3>NOA Scanner</h3>
+        <p>The optimizer's biggest friction is its first input — almost nobody knows their contribution room. The scanner simulates an LLM document pipeline reading a CRA Notice of Assessment: field-by-field extraction with confidence scores, human-in-the-loop review, then one-tap import into the optimizer.</p>
+        <a href="noa-scanner.html">Open the Scanner →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Product decisions worth noting</h2>
+    <div class="decisions">
+      <div class="d-row"><div class="n">1</div><p><strong>Explainability is the product.</strong> In a regulated space, a black-box "score" is a liability. Every recommendation shows its reasoning, every assumption is user-overridable — which also keeps the tool on the guidance side of the advice regulatory line.</p></div>
+      <div class="d-row"><div class="n">2</div><p><strong>The AI reads only what's actually on the document.</strong> TFSA room doesn't appear on a Notice of Assessment — so the scanner doesn't pretend to extract it. It's flagged as a default with CRA My Account linkage as the v2 source of truth. AI features earn trust by being honest about their limits.</p></div>
+      <div class="d-row"><div class="n">3</div><p><strong>Human in the loop where errors are expensive.</strong> A mis-read RRSP limit risks CRA penalties, so extraction shows per-field confidence and requires explicit confirmation before any value is used.</p></div>
+      <div class="d-row"><div class="n">4</div><p><strong>The output is an action, not a report.</strong> The plan ends in a deposit instruction — the metric that matters to any fintech is funded accounts, not calculator sessions.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Mohammed Omer Shaik</strong> · <a href="mailto:omershaikofficial@gmail.com">omershaikofficial@gmail.com</a><br>
+    Independent product concept. Not affiliated with any financial institution. Uses 2026 CRA limits; AI extraction simulated for demo purposes. Not financial or tax advice.</p>
+  </footer>
+</div>
+
+</body>
+</html>
