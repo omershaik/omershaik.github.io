@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohammed Omer Shaik — AI Product Manager &amp; Builder</title>
-  <meta name="description" content="Mohammed Omer Shaik — AI Product Manager who ships products end-to-end, across fintech, developer tools, research, and real estate. Six open-source projects. Targeting AI Product Manager and AI Solutions Engineering roles in Canada." />
+  <meta name="description" content="Mohammed Omer Shaik is an AI product manager and builder. Selected work includes SANAD, Conviction, LaserEyedBen, PropertyLedger, PARCEL, Lorenth, and Room." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Mohammed Omer Shaik — AI Product Manager & Builder" />
-  <meta property="og:description" content="AI Product Manager shipping products end-to-end — fintech, dev tools, research, real estate. Six open-source. Targeting AI PM & solutions roles in Canada." />
+  <meta property="og:description" content="AI product manager and builder working across contractor procurement, fintech, research, developer tools, and real estate." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://omershaik.com/" />
   <link rel="canonical" href="https://omershaik.com/" />
@@ -133,6 +133,12 @@
     .cell p { color: var(--fg-muted); font-size: 0.9375rem; margin-top: var(--sm); }
     .cell .spacer { flex: 1; }
     .cell .meta { margin-top: var(--lg); display: flex; align-items: center; justify-content: space-between; }
+    .project-actions { margin-top: var(--lg); display: flex; gap: var(--sm); flex-wrap: wrap; }
+    .project-actions a, .project-actions span { min-height: 38px; padding: 7px 12px; border: 1px solid var(--border-strong); border-radius: var(--r-md); font-size: 0.8125rem; color: var(--fg-body); display: inline-flex; align-items: center; }
+    .project-actions a:first-child { background: var(--fg-body); color: var(--fg-inverse); }
+    .project-actions span { color: var(--fg-subtle); }
+    .project-gallery { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--sm); margin-top: var(--lg); }
+    .project-shot { width: 100%; height: 150px; object-fit: cover; object-position: top; border: 1px solid var(--border-default); border-radius: var(--r-md); background: var(--bg-canvas); }
     .cell .role { font-size: 0.8125rem; color: var(--fg-subtle); }
     .cell .arrow { color: var(--fg-subtle); transition: transform var(--dur-fast) var(--ease-standard), color var(--dur-fast); }
     .cell:hover .arrow { transform: translate(2px,-2px); color: var(--fg-body); }
@@ -141,7 +147,7 @@
     .stat .l { font-size: 0.75rem; color: var(--fg-subtle); }
 
     @media (max-width: 880px) { .bento { grid-template-columns: repeat(2, 1fr); } .cell.feature { grid-column: span 2; grid-row: auto; } .cell.x2 { grid-column: span 2; } }
-    @media (max-width: 520px) { .bento { grid-template-columns: 1fr; } .cell.x2, .cell.feature { grid-column: span 1; } }
+    @media (max-width: 520px) { .bento { grid-template-columns: 1fr; } .cell.x2, .cell.feature { grid-column: span 1; } .project-gallery { grid-template-columns: 1fr; } .project-shot { height: auto; } }
 
     .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--2xl); align-items: start; }
     .about-grid p { color: var(--fg-muted); font-size: 1.0625rem; line-height: 1.65; margin-bottom: var(--md); max-width: 60ch; }
@@ -206,14 +212,12 @@
     <section class="hero" style="border-top:none">
       <div class="hero-grid reveal">
         <div>
-          <span class="status"><span class="dot"></span> Open to AI Product Manager &amp; Solutions roles · Canada · remote-friendly</span>
-          <h1>I turn ideas into AI products <span class="dim">— from the first prompt to production.</span></h1>
+          <span class="status"><span class="dot"></span> Open to hands-on AI product roles</span>
+          <h1>I take a messy problem <span class="dim">and build the first useful version.</span></h1>
           <p class="lede">
-            I&rsquo;m Mohammed Omer Shaik, an <strong style="color:var(--fg-body);font-weight:600">AI product manager who ships</strong>.
-            I take a one-line idea to a working product &mdash; PRD, architecture, then building with AI coding tools &mdash;
-            across domains: a crypto-intelligence agent, an open-source developer tool, a research generator, a
-            marketing pipeline, and property-trust infrastructure. Six are open-source and live on GitHub. I&rsquo;m now
-            focused on <strong style="color:var(--fg-body);font-weight:600">AI product management and solutions engineering</strong> roles.
+            I&rsquo;m Mohammed Omer Shaik, an AI product manager and builder. I research the workflow, decide what belongs
+            in the first release, write the product logic, and build a working product with modern AI tools. My work
+            spans contractor procurement, investment decisions, property records, research agents, and crypto intelligence.
           </p>
           <div class="hero-cta">
             <a href="#work" class="btn btn-primary">View selected work</a>
@@ -233,25 +237,41 @@
       <div class="section-head reveal">
         <div>
           <p class="eyebrow">01 / Selected work</p>
-          <h2>Eight products, five domains, one method</h2>
+          <h2>Working products, with the boundaries left visible</h2>
         </div>
-        <p>Each built spec-first &mdash; PRD, architecture, then a working build assembled with AI coding tools. Six are public on GitHub; two are live products you can use today.</p>
+        <p>Some ran in production, some are live, some are MVPs, and one is still pre-release. Each is labelled by its current state.</p>
       </div>
 
       <div class="bento reveal">
 
-        <!-- Feature: LaserEyedBen -->
-        <a href="https://github.com/omershaik/LaserEyedBen" target="_blank" rel="noopener" class="cell feature">
-          <div class="tags"><span class="tag">Fintech</span><span class="tag">AI Agents</span><span class="tag">Founder &amp; Builder</span></div>
-          <h3>LaserEyedBen</h3>
-          <p>An autonomous crypto-intelligence agent that ran live on X, paired with a Solana token. Sixteen data sources flow into a GPT-4, event-driven pipeline. Its defining decision: migrating storage from PostgreSQL to a hybrid Postgres&nbsp;+&nbsp;Weaviate vector store so the system could reason over similarity, not just records.</p>
+        <!-- Feature: SANAD -->
+        <div class="cell feature">
+          <div class="tags"><span class="tag">Preparing for launch</span><span class="tag">Bilingual</span><span class="tag">Contractor platform</span></div>
+          <h3>SANAD</h3>
+          <p>I built SANAD for a founder in my network, who is preparing it for launch. The product covers contractor discovery, verified profiles, owner procurement, comparable bids, qualification workflows, messaging, and milestone tracking. Its English and Arabic interfaces register all 246 specified states; external services sit behind replaceable adapters for production integration.</p>
           <div class="stat-row">
-            <div class="stat"><div class="n">~16</div><div class="l">data sources</div></div>
-            <div class="stat"><div class="n">85%</div><div class="l">cache hit</div></div>
-            <div class="stat"><div class="n">&lt;1.5s</div><div class="l">responses</div></div>
+            <div class="stat"><div class="n">84</div><div class="l">screens</div></div>
+            <div class="stat"><div class="n">246</div><div class="l">mapped states</div></div>
+            <div class="stat"><div class="n">EN / AR</div><div class="l">bilingual + RTL</div></div>
+          </div>
+          <div class="project-gallery">
+            <img class="project-shot" src="sanad-home.jpg" alt="SANAD contractor discovery home page" loading="lazy" />
+            <img class="project-shot" src="sanad-profile.jpg" alt="SANAD contractor profile with trust score and verified credentials" loading="lazy" />
           </div>
           <div class="spacer"></div>
-          <div class="meta"><span class="role">Built &amp; run in production · full case study in repo</span><span class="arrow">&#8599;</span></div>
+          <div class="project-actions">
+            <a href="https://sanad-demo.onrender.com/" target="_blank" rel="noopener">View live product &#8599;</a>
+            <span>Private source repository</span>
+          </div>
+        </div>
+
+        <!-- LaserEyedBen -->
+        <a href="https://github.com/omershaik/LaserEyedBen" target="_blank" rel="noopener" class="cell x2">
+          <div class="tags"><span class="tag">Production, paused</span><span class="tag">Crypto</span><span class="tag">AI Agents</span></div>
+          <h3>LaserEyedBen</h3>
+          <p>A crypto-intelligence agent that combined roughly sixteen market, on-chain, and social sources with GPT-4, RAG, and event-driven workflows. It ran publicly and is now paused.</p>
+          <div class="spacer"></div>
+          <div class="meta"><span class="role">Product &amp; build lead</span><span class="arrow">&#8599;</span></div>
         </a>
 
         <!-- Conviction -->
@@ -283,9 +303,9 @@
 
         <!-- Palate -->
         <a href="https://github.com/omershaik/Palate" target="_blank" rel="noopener" class="cell">
-          <div class="tags"><span class="tag">Open Source</span><span class="tag">Dev Tools</span></div>
+          <div class="tags"><span class="tag">Pre-release</span><span class="tag">Dev Tools</span></div>
           <h3>Palate</h3>
-          <p>An open-source MCP server that gives AI coding tools a structured design vocabulary, so generated sites land in named registers instead of AI-default sameness. <em style="color:var(--fg-subtle)">This site was built with it.</em></p>
+          <p>An MCP server in development that gives AI coding tools a structured design vocabulary, so generated sites can work from a named visual direction instead of a generic default.</p>
           <div class="spacer"></div>
           <div class="meta"><span class="role">Creator</span><span class="arrow">&#8599;</span></div>
         </a>
@@ -294,7 +314,7 @@
         <a href="https://github.com/omershaik/Restaurantpeer" target="_blank" rel="noopener" class="cell">
           <div class="tags"><span class="tag">Marketing</span><span class="tag">Automation</span></div>
           <h3>Restaurantpeer</h3>
-          <p>An end-to-end agentic pipeline: scrape a city&rsquo;s restaurants, pick a hero photo, sample a brand palette from it, and generate an on-brand social post &mdash; runs start to finish without API keys.</p>
+          <p>An MVP slice for restaurant market and peer analysis, turning operator questions into structured comparisons and decision support.</p>
           <div class="spacer"></div>
           <div class="meta"><span class="role">Builder</span><span class="arrow">&#8599;</span></div>
         </a>
@@ -465,7 +485,7 @@
       <div class="contact-card reveal">
         <p class="eyebrow" style="justify-content:center">05 / Contact</p>
         <h2>Let&rsquo;s build something worth shipping.</h2>
-        <p>Open to AI Product Manager and solutions engineering roles &mdash; and interesting collaborations &mdash; in Canada or remote. I reply to everything.</p>
+        <p>Open to hands-on AI product, innovation, and solutions roles.</p>
         <div class="contact-actions">
           <a href="mailto:mohammed@omershaik.com" class="btn btn-primary">mohammed@omershaik.com</a>
           <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">GitHub &rarr;</a>
@@ -485,7 +505,7 @@
         <a href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener">LinkedIn</a>
         <a href="#top">Back to top</a>
       </div>
-      <a href="https://github.com/omershaik/Palate" target="_blank" rel="noopener" class="mono">Styled with Palate · Modern AI Startup</a>
+      <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="mono">Projects and source on GitHub</a>
     </div>
   </footer>
 
