@@ -3,533 +3,346 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammed Omer Shaik — AI Product Manager &amp; Builder</title>
-  <meta name="description" content="Mohammed Omer Shaik is an AI product manager and builder. Selected work includes SANAD, Conviction, LaserEyedBen, PropertyLedger, PARCEL, Lorenth, and Room." />
+  <title>Mohammed Omer Shaik | AI Product Lead and Solutions Architect</title>
+  <meta name="description" content="Mohammed Omer Shaik leads AI products from an unclear operating problem through requirements, architecture, implementation, testing, and release." />
+  <meta name="theme-color" content="#0a0a0a" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Mohammed Omer Shaik — AI Product Manager & Builder" />
-  <meta property="og:description" content="AI product manager and builder working across contractor procurement, fintech, research, developer tools, and real estate." />
+  <meta property="og:title" content="Mohammed Omer Shaik | AI Product Lead and Solutions Architect" />
+  <meta property="og:description" content="Client products, production AI systems, research agents, evaluation tools, and data products built with clear controls and honest boundaries." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://omershaik.com/" />
+  <meta property="og:image" content="https://omershaik.com/omer.jpg" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:alt" content="Mohammed Omer Shaik" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://omershaik.com/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Omer Shaik",
+    "url": "https://omershaik.com/",
+    "image": "https://omershaik.com/omer.jpg",
+    "jobTitle": "AI Product Lead and Solutions Architect",
+    "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "Ontario", "addressCountry": "Canada" },
+    "sameAs": ["https://linkedin.com/in/omershaik", "https://github.com/omershaik"]
+  }
+  </script>
 
   <style>
-    /* ============================================================
-       PALATE CARD: Modern AI Startup (CANONICAL-3)
-       Color: COLOR-4 Dark-Mode Dominant · Type: TYPE-5 Geometric-Modernist
-       Layout: LAYOUT-3a Marketing-Bento · Motion: MOTION-3 Functional-Snappy
-       Component: COMP-2 Soft-Container · Voice: VOICE-4 Direct Professional
-       ============================================================ */
     :root {
-      --bg-canvas: #0a0a0a;
-      --bg-surface: #171717;
-      --bg-elevated: #262626;
-      --bg-subtle: #171717;
-      --fg-body: #fafafa;
-      --fg-muted: #a3a3a3;
-      --fg-subtle: #737373;
-      --fg-inverse: #0a0a0a;
-      --accent-primary: #fafafa;
-      --accent-cta: #ffffff;
-      --accent-secondary: #a3a3a3;
-      --border-default: #262626;
-      --border-subtle: #171717;
-      --border-strong: #404040;
-
-      --font-display: 'Inter', 'SF Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      --font-body: 'Inter', 'SF Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-
-      --xs: 4px;  --sm: 8px;  --md: 16px;  --lg: 24px;  --xl: 32px;  --2xl: 48px;
-      --touch-min: 44px;
-
-      --r-sm: 4px; --r-md: 8px; --r-lg: 12px; --r-full: 9999px;
-
-      --dur-fast: 150ms; --dur-medium: 250ms; --dur-slow: 400ms;
-      --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
-      --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
-      --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
-
-      --maxw: 1120px;
+      --bg: #0a0a0a; --surface: #151515; --surface-2: #1c1c1c;
+      --text: #fafafa; --muted: #a3a3a3; --subtle: #737373;
+      --line: #292929; --line-strong: #454545; --green: #4ade80; --blue: #7eb6ff;
+      --font: 'Inter', 'SF Pro Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --max: 1120px; --r-sm: 6px; --r-md: 10px; --r-lg: 16px;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    html, body { overflow-x: hidden; max-width: 100%; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-
-    body {
-      background: var(--bg-canvas);
-      color: var(--fg-body);
-      font-family: var(--font-body);
-      font-size: 1rem; line-height: 1.5;
-      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-    }
+    body { min-width: 320px; overflow-x: hidden; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 1rem; line-height: 1.55; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
     a { color: inherit; text-decoration: none; }
-    ::selection { background: var(--fg-body); color: var(--fg-inverse); }
-    :focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; border-radius: var(--r-sm); }
+    img { max-width: 100%; }
+    ::selection { background: var(--text); color: var(--bg); }
+    :focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: var(--r-sm); }
+    .skip-link { position: fixed; top: 12px; left: 12px; z-index: 100; padding: 10px 14px; background: var(--text); color: var(--bg); border-radius: var(--r-sm); font-weight: 600; transform: translateY(-160%); transition: transform 150ms ease; }
+    .skip-link:focus { transform: translateY(0); }
+    .wrap { width: min(100% - 48px, var(--max)); margin-inline: auto; }
+    .eyebrow { margin-bottom: 14px; color: var(--subtle); font: 500 0.75rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
+    .mono { color: var(--muted); font: 0.78rem/1.5 var(--mono); }
 
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--lg); }
-    .mono { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.02em; color: var(--fg-muted); }
-    .eyebrow { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-subtle); margin-bottom: var(--md); }
-
-    header.nav { position: sticky; top: 0; z-index: 50; background: rgba(10,10,10,0.72); backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid var(--border-default); }
-    .nav-inner { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: var(--md) var(--lg); min-height: var(--touch-min); }
-    .brand { font-weight: 600; letter-spacing: -0.01em; font-size: 1rem; }
-    .brand span { color: var(--fg-subtle); }
-    .nav-links { display: flex; align-items: center; gap: var(--lg); }
-    .nav-links a { font-size: 0.9375rem; color: var(--fg-muted); transition: color var(--dur-fast) var(--ease-standard); min-height: var(--touch-min); display: inline-flex; align-items: center; }
-    .nav-links a:hover { color: var(--fg-body); }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sm); min-height: var(--touch-min); padding: var(--sm) var(--lg); border-radius: var(--r-md); font-size: 0.9375rem; font-weight: 500; border: 1px solid transparent; cursor: pointer; transition: background var(--dur-fast) var(--ease-standard), border-color var(--dur-fast) var(--ease-standard), transform var(--dur-fast) var(--ease-standard); }
-    .btn-primary { background: var(--accent-primary); color: var(--fg-inverse); border-color: var(--accent-primary); }
-    .btn-primary:hover { background: var(--accent-cta); }
-    .btn-secondary { background: transparent; color: var(--fg-body); border-color: var(--border-strong); }
-    .btn-secondary:hover { background: var(--bg-surface); border-color: var(--fg-subtle); }
-    .btn:active { transform: translateY(1px); }
-    .nav-toggle { display: none; background: none; border: 1px solid var(--border-strong); border-radius: var(--r-md); width: 44px; height: 44px; align-items: center; justify-content: center; color: var(--fg-body); cursor: pointer; }
+    .nav { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--line); background: rgba(10,10,10,0.82); backdrop-filter: saturate(140%) blur(14px); }
+    .nav-inner { width: min(100% - 48px, var(--max)); min-height: 72px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-size: 0.95rem; font-weight: 700; letter-spacing: -0.01em; }
+    .brand span { margin-left: 7px; color: var(--subtle); font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links > a:not(.btn) { min-height: 44px; display: inline-flex; align-items: center; color: var(--muted); font-size: 0.9rem; transition: color 150ms ease; }
+    .nav-links > a:hover { color: var(--text); }
+    .nav-toggle { width: 44px; height: 44px; display: none; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: var(--r-md); background: transparent; color: var(--text); cursor: pointer; }
     .nav-toggle svg { width: 20px; height: 20px; }
-    @media (max-width: 680px) {
+
+    .btn { min-height: 44px; padding: 9px 18px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: var(--r-md); font-size: 0.9rem; font-weight: 600; transition: background 150ms ease, border-color 150ms ease, transform 150ms ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn-primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .btn-primary:hover { background: #e5e5e5; }
+    .btn-secondary { border-color: var(--line-strong); background: transparent; color: var(--text); }
+    .btn-secondary:hover { background: var(--surface); }
+
+    .hero { padding: clamp(56px,8vw,88px) 0 clamp(56px,7vw,80px); display: grid; grid-template-columns: minmax(0,1.25fr) minmax(240px,0.65fr); gap: clamp(32px,6vw,72px); align-items: center; }
+    .status { width: fit-content; margin-bottom: 24px; padding: 7px 13px; display: inline-flex; align-items: center; gap: 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 0.78rem; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(74,222,128,0.12); }
+    .hero h1 { max-width: 20ch; font-size: clamp(2.25rem,5.4vw,4.1rem); line-height: 1.03; letter-spacing: -0.045em; font-weight: 750; }
+    .hero h1 span { color: var(--subtle); }
+    .lede { max-width: 62ch; margin-top: 25px; color: var(--muted); font-size: clamp(1.05rem,2.2vw,1.2rem); }
+    .hero-actions { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .portrait-frame { width: min(100%,360px); aspect-ratio: 4/5; justify-self: end; overflow: hidden; border: 1px solid var(--line-strong); border-radius: var(--r-lg); background: var(--surface); }
+    .portrait { width: 100%; height: 100%; object-fit: cover; object-position: 58% center; display: block; }
+
+    section.content-section { padding: clamp(62px,9vw,96px) 0; border-top: 1px solid var(--line); }
+    .section-head { margin-bottom: 32px; display: flex; align-items: end; justify-content: space-between; gap: 28px; }
+    .section-head h2 { font-size: clamp(1.65rem,4vw,2.15rem); line-height: 1.15; letter-spacing: -0.03em; }
+    .section-head > p { max-width: 50ch; color: var(--muted); font-size: 0.94rem; }
+
+    .case-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; align-items: start; }
+    .case { min-width: 0; padding: clamp(22px,3vw,30px); display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); transition: border-color 250ms ease, transform 250ms ease, background 250ms ease; }
+    .case:hover { border-color: var(--line-strong); background: var(--surface-2); transform: translateY(-2px); }
+    .case.feature { grid-column: 1/-1; }
+    .case-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+    .case h3 { margin-top: 10px; font-size: clamp(1.35rem,3vw,1.8rem); line-height: 1.15; letter-spacing: -0.025em; }
+    .case-kicker { color: var(--blue); font: 500 0.69rem/1.45 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .case-status { flex: 0 0 auto; color: var(--muted); font: 0.7rem/1.4 var(--mono); text-align: right; }
+    .case-copy { max-width: 75ch; margin-top: 14px; color: var(--muted); font-size: 0.94rem; }
+    .case-copy strong { color: var(--text); font-weight: 600; }
+    .evidence { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .metric { min-width: 116px; padding: 13px 15px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--bg); }
+    .metric strong { display: block; font-size: 1.3rem; line-height: 1.15; letter-spacing: -0.025em; }
+    .metric span { display: block; margin-top: 4px; color: var(--subtle); font-size: 0.7rem; }
+    .visual-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; align-items: start; }
+    .visual { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: var(--r-md); background: #090909; object-fit: contain; object-position: center; }
+    .case:not(.feature) .visual { margin-top: 20px; }
+    .case-boundary { margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--subtle); font-size: 0.79rem; }
+    .case-actions { margin-top: auto; padding-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .case-actions a, .case-actions span { min-height: 40px; padding: 8px 12px; display: inline-flex; align-items: center; border: 1px solid var(--line-strong); border-radius: var(--r-md); font-size: 0.79rem; }
+    .case-actions a { background: var(--text); color: var(--bg); font-weight: 600; }
+    .case-actions a.secondary { background: transparent; color: var(--text); font-weight: 500; }
+    .case-actions span { color: var(--subtle); }
+
+    .more-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+    .project { min-height: 220px; padding: 22px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); transition: border-color 250ms ease, transform 250ms ease; }
+    a.project:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+    .project .type { color: var(--subtle); font: 0.68rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; }
+    .project h3 { margin-top: 12px; font-size: 1.15rem; }
+    .project p { margin-top: 9px; color: var(--muted); font-size: 0.88rem; }
+    .project .project-meta { margin-top: auto; padding-top: 18px; display: flex; justify-content: space-between; gap: 10px; color: var(--subtle); font: 0.7rem/1.4 var(--mono); }
+
+    .about-grid { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(280px,0.75fr); gap: 48px; align-items: start; }
+    .about-copy p { max-width: 66ch; margin-bottom: 18px; color: var(--muted); font-size: 1.02rem; }
+    .about-copy strong { color: var(--text); font-weight: 600; }
+    .method { display: grid; gap: 12px; }
+    .method-step { padding: 18px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
+    .method-step span { color: var(--blue); font: 0.68rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .method-step h3 { margin-top: 7px; font-size: 0.98rem; }
+    .method-step p { margin-top: 5px; color: var(--muted); font-size: 0.84rem; }
+    .skills-grid { margin-top: 32px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+    .skill-group { padding: 20px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
+    .skill-group h3 { color: var(--subtle); font: 0.69rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .skill-group p { margin-top: 10px; color: var(--muted); font-size: 0.87rem; }
+
+    .timeline { border-top: 1px solid var(--line); }
+    .role { padding: 24px 0; display: grid; grid-template-columns: 175px minmax(0,1fr); gap: 26px; border-bottom: 1px solid var(--line); }
+    .role time { color: var(--subtle); font: 0.75rem/1.5 var(--mono); }
+    .role h3 { font-size: 1rem; }
+    .role h3 span { color: var(--muted); font-weight: 500; }
+    .role .location { margin-top: 3px; color: var(--subtle); font-size: 0.81rem; }
+    .role p { max-width: 75ch; margin-top: 8px; color: var(--muted); font-size: 0.9rem; }
+
+    .education-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+    .panel { padding: 22px; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); }
+    .panel.wide { grid-column: 1/-1; }
+    .panel .label { color: var(--subtle); font: 0.68rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .panel h3 { margin-top: 10px; font-size: 1rem; }
+    .panel p { margin-top: 7px; color: var(--muted); font-size: 0.87rem; }
+    .certs { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 9px; }
+    .cert { padding: 7px 10px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--bg); color: var(--muted); font-size: 0.79rem; }
+
+    .contact-card { padding: clamp(30px,7vw,58px); border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); text-align: center; }
+    .contact-card h2 { font-size: clamp(1.8rem,5vw,2.7rem); line-height: 1.1; letter-spacing: -0.035em; }
+    .contact-card p { max-width: 48ch; margin: 14px auto 0; color: var(--muted); }
+    .contact-actions { margin-top: 26px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    footer { padding: 30px 0; border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .footer-links a { color: var(--muted); font-size: 0.8rem; }
+    .footer-links a:hover { color: var(--text); }
+    .reveal { opacity: 0; transform: translateY(10px); transition: opacity 400ms ease, transform 400ms ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) { .skills-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 760px) {
+      .wrap, .nav-inner { width: min(100% - 32px,var(--max)); }
       .nav-inner { position: relative; }
       .nav-toggle { display: inline-flex; }
-      .nav-links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: var(--sm) var(--lg) var(--md); background: var(--bg-surface); border-bottom: 1px solid var(--border-default); display: none; }
+      .nav-links { position: absolute; top: 100%; left: -16px; right: -16px; padding: 10px 16px 16px; display: none; flex-direction: column; align-items: stretch; gap: 0; border-bottom: 1px solid var(--line); background: var(--surface); }
       .nav-links.open { display: flex; }
-      .nav-links a { padding: var(--sm) 0; }
-      .nav-links .btn { margin-top: var(--sm); width: 100%; }
+      .nav-links > a:not(.btn) { padding: 5px 0; }
+      .nav-links .btn { margin-top: 8px; width: 100%; }
+      .hero { grid-template-columns: 1fr; }
+      .portrait-frame { width: min(100%,330px); justify-self: start; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .case-grid, .about-grid, .education-grid { grid-template-columns: 1fr; }
+      .case.feature, .panel.wide { grid-column: auto; }
+      .visual-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
     }
-
-    .hero { padding: clamp(72px, 14vw, 140px) 0 var(--2xl); }
-    .hero h1 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; font-size: clamp(2.05rem, 7vw, 4.25rem); max-width: 18ch; overflow-wrap: break-word; }
-    .hero h1 .dim { color: var(--fg-subtle); }
-    .hero .lede { margin-top: var(--lg); max-width: 60ch; font-size: clamp(1.0625rem, 2.4vw, 1.25rem); line-height: 1.55; color: var(--fg-muted); }
-    .avatar { width: 88px; height: 88px; border-radius: var(--r-full); object-fit: cover; border: 1px solid var(--border-strong); margin-bottom: var(--lg); display: block; }
-    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
-    .hero-portrait { width: 100%; border-radius: var(--r-lg); border: 1px solid var(--border-strong); object-fit: cover; aspect-ratio: 4 / 5; display: block; }
-    @media (max-width: 760px) {
-      .hero-grid { grid-template-columns: 1fr; gap: var(--xl); }
-      .hero-portrait { max-width: 280px; aspect-ratio: 1 / 1; }
+    @media (max-width: 560px) {
+      .more-grid { grid-template-columns: 1fr; }
+      .role { grid-template-columns: 1fr; gap: 7px; }
+      .hero-actions .btn { width: 100%; }
+      .case-head { flex-direction: column; }
+      .case-status { text-align: left; }
+      .metric { min-width: calc(50% - 6px); flex: 1; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
     }
-    .hero-cta { margin-top: var(--xl); display: flex; gap: var(--md); flex-wrap: wrap; }
-    .status { display: inline-flex; align-items: center; gap: var(--sm); margin-bottom: var(--lg); padding: 6px var(--md); border: 1px solid var(--border-default); border-radius: var(--r-full); font-size: 0.8125rem; color: var(--fg-muted); background: var(--bg-surface); }
-    .dot { width: 7px; height: 7px; border-radius: var(--r-full); background: #4ade80; box-shadow: 0 0 0 3px rgba(74,222,128,0.15); }
-
-    section { padding: clamp(56px, 9vw, 96px) 0; border-top: 1px solid var(--border-default); }
-    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--lg); flex-wrap: wrap; margin-bottom: var(--xl); }
-    .section-head h2 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; font-size: clamp(1.5rem, 4vw, 1.875rem); }
-    .section-head p { color: var(--fg-muted); max-width: 48ch; font-size: 0.9375rem; }
-
-    .bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--md); }
-    .cell { background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--r-lg); padding: var(--lg); display: flex; flex-direction: column; min-height: 200px; transition: border-color var(--dur-medium) var(--ease-standard), background var(--dur-medium) var(--ease-standard), transform var(--dur-medium) var(--ease-decelerate); }
-    .cell:hover { border-color: var(--border-strong); background: #1c1c1c; transform: translateY(-2px); }
-    .cell.x2 { grid-column: span 2; }
-    .cell.feature { grid-column: span 2; grid-row: span 2; }
-    .cell .tags { display: flex; gap: var(--sm); flex-wrap: wrap; margin-bottom: var(--md); }
-    .tag { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.03em; color: var(--fg-muted); border: 1px solid var(--border-default); padding: 3px 8px; border-radius: var(--r-sm); background: var(--bg-canvas); }
-    .cell h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
-    .cell.feature h3 { font-size: 1.6rem; }
-    .cell p { color: var(--fg-muted); font-size: 0.9375rem; margin-top: var(--sm); }
-    .cell .spacer { flex: 1; }
-    .cell .meta { margin-top: var(--lg); display: flex; align-items: center; justify-content: space-between; }
-    .project-actions { margin-top: var(--lg); display: flex; gap: var(--sm); flex-wrap: wrap; }
-    .project-actions a, .project-actions span { min-height: 38px; padding: 7px 12px; border: 1px solid var(--border-strong); border-radius: var(--r-md); font-size: 0.8125rem; color: var(--fg-body); display: inline-flex; align-items: center; }
-    .project-actions a:first-child { background: var(--fg-body); color: var(--fg-inverse); }
-    .project-actions span { color: var(--fg-subtle); }
-    .project-gallery { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--sm); margin-top: var(--lg); }
-    .project-shot { width: 100%; height: 150px; object-fit: cover; object-position: top; border: 1px solid var(--border-default); border-radius: var(--r-md); background: var(--bg-canvas); }
-    .cell .role { font-size: 0.8125rem; color: var(--fg-subtle); }
-    .cell .arrow { color: var(--fg-subtle); transition: transform var(--dur-fast) var(--ease-standard), color var(--dur-fast); }
-    .cell:hover .arrow { transform: translate(2px,-2px); color: var(--fg-body); }
-    .stat-row { display: flex; flex-wrap: wrap; gap: clamp(var(--md), 4vw, var(--xl)); margin-top: var(--md); }
-    .stat .n { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
-    .stat .l { font-size: 0.75rem; color: var(--fg-subtle); }
-
-    @media (max-width: 880px) { .bento { grid-template-columns: repeat(2, 1fr); } .cell.feature { grid-column: span 2; grid-row: auto; } .cell.x2 { grid-column: span 2; } }
-    @media (max-width: 520px) { .bento { grid-template-columns: 1fr; } .cell.x2, .cell.feature { grid-column: span 1; } .project-gallery { grid-template-columns: 1fr; } .project-shot { height: auto; } }
-
-    .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--2xl); align-items: start; }
-    .about-grid p { color: var(--fg-muted); font-size: 1.0625rem; line-height: 1.65; margin-bottom: var(--md); max-width: 60ch; }
-    .about-grid p strong { color: var(--fg-body); font-weight: 600; }
-    .panel { background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--r-lg); padding: var(--lg); }
-    .panel h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--fg-subtle); font-family: var(--font-mono); margin-bottom: var(--md); }
-    .chips { display: flex; flex-wrap: wrap; gap: var(--sm); }
-    .panel + .panel { margin-top: var(--md); }
-    @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; gap: var(--xl); } }
-
-    .xp { display: flex; flex-direction: column; }
-    .xp-row { display: grid; grid-template-columns: 150px 1fr; gap: var(--lg); padding: var(--lg) 0; border-top: 1px solid var(--border-default); transition: background var(--dur-fast) var(--ease-standard); }
-    .xp-row:hover { background: var(--bg-surface); }
-    .xp-row .when { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--fg-subtle); padding-top: 3px; }
-    .xp-row .what h3 { font-size: 1.0625rem; font-weight: 600; }
-    .xp-row .what .org { color: var(--fg-muted); font-size: 0.9375rem; }
-    .xp-row .what p { color: var(--fg-muted); font-size: 0.9375rem; margin-top: var(--sm); max-width: 70ch; }
-    @media (max-width: 600px) { .xp-row { grid-template-columns: 1fr; gap: var(--xs); } }
-
-    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--md); }
-    @media (max-width: 700px) { .edu-grid { grid-template-columns: 1fr; } }
-
-    .contact-card { background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--r-lg); padding: clamp(28px, 6vw, 56px); text-align: center; }
-    .contact-card h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(1.75rem, 5vw, 2.5rem); }
-    .contact-card p { color: var(--fg-muted); margin-top: var(--md); font-size: 1.0625rem; max-width: 46ch; margin-left: auto; margin-right: auto; }
-    .contact-actions { margin-top: var(--xl); display: flex; gap: var(--md); justify-content: center; flex-wrap: wrap; }
-
-    footer { border-top: 1px solid var(--border-default); padding: var(--xl) 0; }
-    .foot-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--md); flex-wrap: wrap; }
-    .foot-inner .mono { font-size: 0.75rem; }
-    .foot-links { display: flex; gap: var(--lg); }
-    .foot-links a { font-size: 0.8125rem; color: var(--fg-muted); transition: color var(--dur-fast); }
-    .foot-links a:hover { color: var(--fg-body); }
-
-    .reveal { opacity: 0; transform: translateY(12px); transition: opacity var(--dur-slow) var(--ease-decelerate), transform var(--dur-slow) var(--ease-decelerate); }
-    .reveal.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } .reveal { opacity: 1; transform: none; } }
   </style>
 </head>
 <body>
-
-  <!-- ================= NAV ================= -->
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="nav">
     <div class="nav-inner">
-      <a href="#top" class="brand">Omer Shaik<span> · AI PM</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <a class="brand" href="#top">Omer Shaik <span>AI product and systems</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
-      <nav class="nav-links">
-        <a href="#work" class="nav-anchor">Work</a>
-        <a href="#about" class="nav-anchor">About</a>
-        <a href="#experience" class="nav-anchor">Experience</a>
-        <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="nav-anchor">GitHub</a>
-        <a href="mailto:mohammed@omershaik.com" class="btn btn-primary">Get in touch</a>
+      <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a><a href="#about">Approach</a><a href="#experience">Experience</a><a href="https://github.com/omershaik" target="_blank" rel="noopener">GitHub</a><a class="btn btn-primary" href="mailto:mohammed@omershaik.com">Get in touch</a>
       </nav>
     </div>
   </header>
 
-  <main id="top" class="wrap">
-
-    <!-- ================= HERO ================= -->
-    <section class="hero" style="border-top:none">
-      <div class="hero-grid reveal">
-        <div>
-          <span class="status"><span class="dot"></span> Open to hands-on AI product roles</span>
-          <h1>I take a messy problem <span class="dim">and build the first useful version.</span></h1>
-          <p class="lede">
-            I&rsquo;m Mohammed Omer Shaik, an AI product manager and builder. I research the workflow, decide what belongs
-            in the first release, write the product logic, and build a working product with modern AI tools. My work
-            spans contractor procurement, investment decisions, property records, research agents, and crypto intelligence.
-          </p>
-          <div class="hero-cta">
-            <a href="#work" class="btn btn-primary">View selected work</a>
-            <a href="Omer_Shaik_Resume.pdf" class="btn btn-secondary">Download résumé &darr;</a>
-            <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">GitHub &rarr;</a>
-            <a href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn &rarr;</a>
-          </div>
-        </div>
-        <div>
-          <img class="hero-portrait" src="omer.jpg" alt="Mohammed Omer Shaik" />
-        </div>
+  <main id="main" class="wrap">
+    <section class="hero" id="top">
+      <div class="reveal">
+        <div class="status"><span class="dot" aria-hidden="true"></span> Toronto based and open to hands-on AI roles</div>
+        <p class="eyebrow">AI Product Lead and Solutions Architect</p>
+        <h1>I turn unclear operating problems <span>into working AI products.</span></h1>
+        <p class="lede">I lead the work from discovery and requirements through architecture, product logic, implementation, testing, and release. My background spans banking systems, content moderation tools, manufacturing quality, and hands-on AI product delivery.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#work">See the work</a><a class="btn btn-secondary" href="Mohammed_Omer_Shaik_Resume.pdf" download>Download résumé</a><a class="btn btn-secondary" href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+      <div class="portrait-frame reveal">
+        <img class="portrait" src="omer.jpg" width="1536" height="1024" alt="Mohammed Omer Shaik" fetchpriority="high" />
       </div>
     </section>
 
-    <!-- ================= WORK (BENTO) ================= -->
-    <section id="work">
+    <section class="content-section" id="work">
       <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">01 / Selected work</p>
-          <h2>Working products, with the boundaries left visible</h2>
-        </div>
-        <p>Some ran in production, some are live, some are MVPs, and one is still pre-release. Each is labelled by its current state.</p>
+        <div><p class="eyebrow">Selected work</p><h2>Products with the evidence left visible</h2></div>
+        <p>Each product is labelled by who it was built for, what reached a working state, and where the boundary still sits.</p>
       </div>
 
-      <div class="bento reveal">
+      <div class="case-grid">
+        <article class="case feature reveal">
+          <div class="case-head"><div><p class="case-kicker">Client product</p><h3>SANAD</h3></div><p class="case-status">Live demo<br />Preparing for commercial launch</p></div>
+          <p class="case-copy"><strong>The problem:</strong> contractor discovery and procurement depend on fragmented records, unverified claims, and bid processes that are difficult to compare. I built a bilingual product for a founder that brings discovery, verified profiles, project posting, comparable bids, awards, milestones, purchase orders, invoices, and audit records into one workflow.</p>
+          <div class="evidence" aria-label="SANAD product evidence"><div class="metric"><strong>126</strong><span>product screens</span></div><div class="metric"><strong>452</strong><span>registered states</span></div><div class="metric"><strong>904</strong><span>English and Arabic browser cases</span></div><div class="metric"><strong>EN + AR</strong><span>full RTL support</span></div></div>
+          <div class="visual-grid"><img class="visual" src="sanad-home.jpg" width="1440" height="900" alt="SANAD contractor discovery home screen" loading="lazy" /><img class="visual" src="sanad-profile.jpg" width="1440" height="900" alt="SANAD contractor profile with credentials and trust score" loading="lazy" /></div>
+          <p class="case-boundary">Current boundary: the product and bilingual state coverage are working. External verification, messaging, and payment services remain behind replaceable adapters for production integration.</p>
+          <div class="case-actions"><a href="https://sanad-demo.onrender.com/" target="_blank" rel="noopener">Open live demo</a><span>Source repository is private</span></div>
+        </article>
 
-        <!-- Feature: SANAD -->
-        <div class="cell feature">
-          <div class="tags"><span class="tag">Preparing for launch</span><span class="tag">Bilingual</span><span class="tag">Contractor platform</span></div>
-          <h3>SANAD</h3>
-          <p>I built SANAD for a founder in my network, who is preparing it for launch. The product covers contractor discovery, verified profiles, owner procurement, comparable bids, qualification workflows, messaging, and milestone tracking. Its English and Arabic interfaces register all 246 specified states; external services sit behind replaceable adapters for production integration.</p>
-          <div class="stat-row">
-            <div class="stat"><div class="n">84</div><div class="l">screens</div></div>
-            <div class="stat"><div class="n">246</div><div class="l">mapped states</div></div>
-            <div class="stat"><div class="n">EN / AR</div><div class="l">bilingual + RTL</div></div>
-          </div>
-          <div class="project-gallery">
-            <img class="project-shot" src="sanad-home.jpg" alt="SANAD contractor discovery home page" loading="lazy" />
-            <img class="project-shot" src="sanad-profile.jpg" alt="SANAD contractor profile with trust score and verified credentials" loading="lazy" />
-          </div>
-          <div class="spacer"></div>
-          <div class="project-actions">
-            <a href="https://sanad-demo.onrender.com/" target="_blank" rel="noopener">View live product &#8599;</a>
-            <span>Private source repository</span>
-          </div>
-        </div>
+        <article class="case reveal">
+          <div class="case-head"><div><p class="case-kicker">Partner backed product</p><h3>LaserEyedBen</h3></div><p class="case-status">Production system<br />Paused after operation</p></div>
+          <p class="case-copy">An autonomous crypto intelligence agent that combined market, on-chain, developer, news, and social signals. I designed the multi-source workflow, event processing, retrieval, personality controls, fallbacks, rate limits, and operating checks.</p>
+          <div class="evidence" aria-label="LaserEyedBen product evidence"><div class="metric"><strong>~16</strong><span>live data sources</span></div><div class="metric"><strong>20+</strong><span>intelligence engines</span></div><div class="metric"><strong>85%</strong><span>cache hit rate under 100 ms</span></div><div class="metric"><strong>&lt;1.5 s</strong><span>full response benchmark</span></div></div>
+          <p class="case-boundary">Current boundary: the system ran publicly and was paused when API and infrastructure costs outgrew available funding.</p>
+          <div class="case-actions"><a href="https://github.com/omershaik/LaserEyedBen" target="_blank" rel="noopener">View repository</a></div>
+        </article>
 
-        <!-- LaserEyedBen -->
-        <a href="https://github.com/omershaik/LaserEyedBen" target="_blank" rel="noopener" class="cell x2">
-          <div class="tags"><span class="tag">Production, paused</span><span class="tag">Crypto</span><span class="tag">AI Agents</span></div>
-          <h3>LaserEyedBen</h3>
-          <p>A crypto-intelligence agent that combined roughly sixteen market, on-chain, and social sources with GPT-4, RAG, and event-driven workflows. It ran publicly and is now paused.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Product &amp; build lead</span><span class="arrow">&#8599;</span></div>
-        </a>
+        <article class="case reveal">
+          <div class="case-head"><div><p class="case-kicker">Studio product</p><h3>Crucible</h3></div><p class="case-status">Working prototype<br />Evaluation system</p></div>
+          <p class="case-copy">A product specification review system that finds missing acceptance criteria, conflicts, unsupported claims, hidden assumptions, and decisions that still require human judgment. The readiness score cannot show complete while a conflict or judgment item remains open.</p>
+          <img class="visual" src="crucible-review.jpg" width="1512" height="855" alt="Crucible review canvas showing readiness, open decisions, conflicts, and inline findings" loading="lazy" />
+          <p class="case-boundary">The prototype includes a typed rubric engine, contextual grounding, lossless export, API validation, and automated tests. The visible demo uses a deterministic stand-in when no model key is present.</p>
+          <div class="case-actions"><span>Repository available on request</span></div>
+        </article>
 
-        <!-- Conviction -->
-        <a href="https://conviction.investments" target="_blank" rel="noopener" class="cell x2">
-          <div class="tags"><span class="tag">Fintech</span><span class="tag">SaaS</span><span class="tag" style="color:#4ade80;border-color:#2a4a35">Live in beta</span></div>
-          <h3>Conviction</h3>
-          <p>Were you right, or were you lucky? A decision-quality journal for thesis-driven investors &mdash; entries refuse to save without a falsifier, reality checks run against price daily, and a Process Score grades your reasoning while staying blind to returns. Immutable, timestamped, on record.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Founder &amp; builder &middot; conviction.investments</span><span class="arrow">&#8599;</span></div>
-        </a>
+        <article class="case reveal">
+          <div class="case-head"><div><p class="case-kicker">Studio product</p><h3>Lorenth</h3></div><p class="case-status">MVP<br />Agentic research</p></div>
+          <p class="case-copy">A research system that turns a question into a structured, sourced report. It plans the work, gathers current evidence, synthesizes cited findings, and exports the result as a document, presentation, or PDF.</p>
+          <img class="visual" src="lorenth-export.jpg" width="2880" height="1800" alt="Lorenth report export template controls" loading="lazy" />
+          <p class="case-boundary">Built with FastAPI, React, PostgreSQL, Redis, Claude, Perplexity, live data connectors, authentication, billing, and document export services.</p>
+          <div class="case-actions"><a href="https://github.com/omershaik/Lorenth" target="_blank" rel="noopener">View repository</a></div>
+        </article>
 
-        <!-- Room -->
-        <a href="room/" class="cell x2">
-          <div class="tags"><span class="tag">Fintech</span><span class="tag">AI</span><span class="tag" style="color:#4ade80;border-color:#2a4a35">Live demo &mdash; try it</span></div>
-          <h3>Room</h3>
-          <p>A two-part answer to Canada&rsquo;s hardest everyday money question &mdash; TFSA, RRSP, or FHSA? An explainable contribution optimizer built on 2026 CRA limits, plus an AI scanner that reads contribution room straight off a Notice of Assessment, with confidence scores and human-in-the-loop review.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Product concept &middot; runs in your browser</span><span class="arrow">&#8599;</span></div>
-        </a>
+        <article class="case reveal">
+          <div class="case-head"><div><p class="case-kicker">Studio product</p><h3>Conviction</h3></div><p class="case-status">Live beta<br />Decision system</p></div>
+          <p class="case-copy">A decision-quality journal for thesis-driven investors. A thesis cannot save without a falsifier, versions remain immutable, reality checks flag broken assumptions, and a deterministic process score evaluates the quality of the decision rather than the return.</p>
+          <img class="visual" src="conviction-card.jpg" width="2048" height="1024" alt="Conviction decision journal title card" loading="lazy" />
+          <p class="case-boundary">No recommendations, broker connections, or automated trading. The product is deliberately limited to recording, checking, and reviewing a user's own reasoning.</p>
+          <div class="case-actions"><a href="https://conviction.investments" target="_blank" rel="noopener">Open live beta</a><span>Source repository is private</span></div>
+        </article>
+      </div>
 
-        <!-- Lorenth -->
-        <a href="https://github.com/omershaik/Lorenth" target="_blank" rel="noopener" class="cell x2">
-          <div class="tags"><span class="tag">Applied AI</span><span class="tag">Research</span></div>
-          <h3>Lorenth</h3>
-          <p>A research-intelligence platform that turns a question into a structured, sourced report &mdash; plan, gather (Perplexity + live data), synthesize with Claude, export to doc, deck or PDF. FastAPI + React. Taken from PRD v1 through v2.1.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Product &amp; architecture</span><span class="arrow">&#8599;</span></div>
-        </a>
-
-        <!-- Palate -->
-        <a href="https://github.com/omershaik/Palate" target="_blank" rel="noopener" class="cell">
-          <div class="tags"><span class="tag">Pre-release</span><span class="tag">Dev Tools</span></div>
-          <h3>Palate</h3>
-          <p>An MCP server in development that gives AI coding tools a structured design vocabulary, so generated sites can work from a named visual direction instead of a generic default.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Creator</span><span class="arrow">&#8599;</span></div>
-        </a>
-
-        <!-- Restaurantpeer -->
-        <a href="https://github.com/omershaik/Restaurantpeer" target="_blank" rel="noopener" class="cell">
-          <div class="tags"><span class="tag">Marketing</span><span class="tag">Automation</span></div>
-          <h3>Restaurantpeer</h3>
-          <p>An MVP slice for restaurant market and peer analysis, turning operator questions into structured comparisons and decision support.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Builder</span><span class="arrow">&#8599;</span></div>
-        </a>
-
-        <!-- PropertyLedger -->
-        <a href="https://github.com/omershaik/PropertyLedger" target="_blank" rel="noopener" class="cell x2">
-          <div class="tags"><span class="tag">PropTech</span><span class="tag">Web3</span></div>
-          <h3>PropertyLedger</h3>
-          <p>Trust infrastructure for real estate &mdash; a 47-point title/legal audit produces a 0&ndash;1000 Trust Score and tamper-proof, on-chain-verifiable certificates. Architected to stay valid as land records move on-chain.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Founder &amp; Product Lead</span><span class="arrow">&#8599;</span></div>
-        </a>
-
-        <!-- PARCEL -->
-        <a href="https://github.com/omershaik/PARCEL" target="_blank" rel="noopener" class="cell x2">
-          <div class="tags"><span class="tag">Data</span><span class="tag">PropTech</span></div>
-          <h3>PARCEL</h3>
-          <p>Turns official Dubai Land Department and RERA data into developer trust scores and project intelligence &mdash; Next.js + Python pipelines, with an honest line between verified data and what needs B2B access.</p>
-          <div class="spacer"></div>
-          <div class="meta"><span class="role">Product &amp; data</span><span class="arrow">&#8599;</span></div>
-        </a>
-
+      <div class="more-grid" aria-label="Additional selected products">
+        <article class="project reveal"><p class="type">Studio product · Working prototype</p><h3>PlotLight</h3><p>A real estate visual workflow with intent-based model routing, live FAL and FLUX generation, cost logging, and editable brand layers. Verified through concept generation and persisted layer editing.</p><div class="project-meta"><span>Generative media</span><span>Private</span></div></article>
+        <a class="project reveal" href="https://github.com/omershaik/Palate" target="_blank" rel="noopener"><p class="type">Open source · MCP server</p><h3>Palate</h3><p>A structured design vocabulary for AI coding tools, with typed inputs, reusable interface rules, compatibility constraints, validation, tests, and documentation.</p><div class="project-meta"><span>Developer tools</span><span>View source ↗</span></div></a>
+        <a class="project reveal" href="https://github.com/omershaik/PropertyLedger" target="_blank" rel="noopener"><p class="type">Studio product · PropTech MVP</p><h3>PropertyLedger</h3><p>A 47-point legal and title review model with explainable scoring, human legal approval, audit events, and public verification for property projects.</p><div class="project-meta"><span>Trust systems</span><span>View source ↗</span></div></a>
+        <a class="project reveal" href="https://github.com/omershaik/PARCEL" target="_blank" rel="noopener"><p class="type">Studio product · Data MVP</p><h3>PARCEL</h3><p>Turns official property registry and project data into comparable research views, with source provenance and visible gaps when a data set requires restricted access.</p><div class="project-meta"><span>Real estate data</span><span>View source ↗</span></div></a>
       </div>
     </section>
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">02 / About</p>
-          <h2>The method, not the market</h2>
+    <section class="content-section" id="about">
+      <div class="section-head reveal"><div><p class="eyebrow">Approach</p><h2>Product judgment backed by systems work</h2></div></div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>I started by building and operating a local commerce product, moved into campaign operations, then spent four years translating banking workflows into services, APIs, data models, and release requirements for engagements serving <strong>HSBC Bank and Saudi National Bank</strong>.</p>
+          <p>That path matters because AI products fail for ordinary reasons: unclear ownership, weak data, missing states, unsafe actions, and no plan for failure. I work across the product and technical layers so those questions are answered before a demo becomes an operating problem.</p>
+          <p>For high-risk workflows, I add <strong>citations, validation, permissions, audit records, fallbacks, and human approval</strong>. The goal is a useful system that people can understand and operate, not a black box with an impressive prompt.</p>
+        </div>
+        <div class="method reveal">
+          <div class="method-step"><span>01 · Frame</span><h3>Find the decision and the user</h3><p>Map the workflow, source material, constraints, failure cost, and the smallest release worth testing.</p></div>
+          <div class="method-step"><span>02 · Build</span><h3>Connect product logic to the system</h3><p>Write the requirements, architecture, data contracts, interfaces, evaluation rules, and working implementation.</p></div>
+          <div class="method-step"><span>03 · Prove</span><h3>Test the states, not just the happy path</h3><p>Check failure behavior, permissions, evidence, release controls, and the boundary between working and planned.</p></div>
         </div>
       </div>
-
-      <div class="about-grid reveal">
-        <div>
-          <p>
-            I&rsquo;m an <strong>AI product manager who builds</strong>. I move from a one-line idea to a PRD, to an
-            architecture, to something you can actually click &mdash; assembled with AI coding tools (Claude Code,
-            Cursor, Codex, Gemini) and a working command of Python. My edge isn&rsquo;t hand-writing production code;
-            it&rsquo;s <strong>compressing the distance between an idea and a working product</strong>.
-          </p>
-          <p>
-            The range is deliberate. I&rsquo;ve shipped a crypto-intelligence agent, an open-source developer tool,
-            an AI research generator, a marketing automation pipeline, and property-trust infrastructure. The common
-            thread isn&rsquo;t an industry &mdash; it&rsquo;s <strong>taking a messy real-world problem, designing the
-            product, and getting a working version into people&rsquo;s hands fast</strong>.
-          </p>
-          <p>
-            I also operate in the real world: I co-founded <strong>Orion Builders &amp; Developers</strong>, a
-            real-estate company where I build the internal AI tools and dashboards the business runs on &mdash; and where
-            the property-domain depth directly powers my PropTech products, PropertyLedger and PARCEL. That blend &mdash;
-            real domain context plus shipping AI products &mdash; is what I&rsquo;d bring to an <strong>AI product role</strong>,
-            in product management or solutions engineering.
-          </p>
-        </div>
-
-        <div>
-          <div class="panel">
-            <h4>Focus</h4>
-            <div class="chips">
-              <span class="tag">AI Product Management</span>
-              <span class="tag">LLM Products</span>
-              <span class="tag">RAG &amp; Agents</span>
-              <span class="tag">Prompt &amp; Context Engineering</span>
-              <span class="tag">0&rarr;1 Prototyping</span>
-              <span class="tag">Product Strategy</span>
-              <span class="tag">PRDs &amp; Technical Specs</span>
-            </div>
-          </div>
-          <div class="panel">
-            <h4>Tools I build with</h4>
-            <div class="chips">
-              <span class="tag">Claude Code</span>
-              <span class="tag">Cursor</span>
-              <span class="tag">Codex</span>
-              <span class="tag">Gemini</span>
-              <span class="tag">Python</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">Postgres + Weaviate</span>
-            </div>
-          </div>
-          <div class="panel">
-            <h4>Company</h4>
-            <div class="chips">
-              <span class="tag">Orion Builders &amp; Developers &mdash; Co-Founder</span>
-            </div>
-          </div>
-        </div>
+      <div class="skills-grid reveal">
+        <div class="skill-group"><h3>Product</h3><p>Discovery, workflow mapping, PRDs, user stories, acceptance criteria, roadmaps, backlog decisions, demonstrations, release planning</p></div>
+        <div class="skill-group"><h3>AI systems</h3><p>LLM APIs, agents, retrieval, structured outputs, evaluation, prompt and context design, citations, fallbacks, human review</p></div>
+        <div class="skill-group"><h3>Software and data</h3><p>Python, TypeScript, JavaScript, Java, React, Next.js, FastAPI, Node.js, PostgreSQL, Redis, Supabase, vector retrieval</p></div>
       </div>
     </section>
 
-    <!-- ================= EXPERIENCE ================= -->
-    <section id="experience">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">03 / Experience</p>
-          <h2>The path here</h2>
-        </div>
-        <p>From founding a city&rsquo;s first online marketplace at 22 to shipping AI products today.</p>
-      </div>
-
-      <div class="xp reveal">
-        <div class="xp-row">
-          <div class="when">2024 &mdash; Present</div>
-          <div class="what">
-            <h3>Co-Founder <span class="org">· Orion Builders &amp; Developers</span></h3>
-            <p>The real-estate company where I apply AI in production: I build the internal tools and dashboards the business runs on, and the property-domain depth here directly powers my PropTech products &mdash; PropertyLedger and PARCEL.</p>
-          </div>
-        </div>
-        <div class="xp-row">
-          <div class="when">2017 &mdash; 2021</div>
-          <div class="what">
-            <h3>Independent Crypto Investor &amp; Researcher</h3>
-            <p>Self-directed trading, investing, and on-chain research &mdash; the foundation for later crypto-AI products.</p>
-          </div>
-        </div>
-        <div class="xp-row">
-          <div class="when">Dec 2017 &mdash; May 2018</div>
-          <div class="what">
-            <h3>Ad Operations Specialist <span class="org">· Yahoo</span></h3>
-            <p>Ad operations and campaign delivery in a digital advertising environment.</p>
-          </div>
-        </div>
-        <div class="xp-row">
-          <div class="when">2015 &mdash; 2016</div>
-          <div class="what">
-            <h3>Co-Founder &amp; CEO <span class="org">· Instazop</span></h3>
-            <p>Gulbarga&rsquo;s first online grocery-delivery marketplace. Ideated the product end-to-end &mdash; website, wireframes, business model, go-to-market &mdash; and ran operations, marketing and a small team, reaching ~60% repeat customers early on.</p>
-          </div>
-        </div>
+    <section class="content-section" id="experience">
+      <div class="section-head reveal"><div><p class="eyebrow">Experience</p><h2>A clean path from operations to AI product delivery</h2></div><p>The chronology here matches my résumé and background records.</p></div>
+      <div class="timeline reveal">
+        <article class="role"><time datetime="2024-09/2026-07">Sep 2024 to Jul 2026</time><div><h3>AI Product Lead and Solutions Architect <span>at CodeSpellStudio</span></h3><p class="location">Canada and India, remote</p><p>Led discovery, requirements, architecture, implementation, testing, release controls, demonstrations, and documentation across client engagements, partner backed products, studio products, and open source work.</p></div></article>
+        <article class="role"><time datetime="2023-10/2024-08">Oct 2023 to Aug 2024</time><div><h3>Product Owner, Content Moderation Tools <span>at Majorel Canada</span></h3><p class="location">Canada</p><p>Turned recurring reviewer, policy, privacy, quality, and escalation issues into clearer workflow requirements and recommendations, working across operations, quality, engineering, and linguistics.</p></div></article>
+        <article class="role"><time datetime="2023-05/2023-08">May 2023 to Aug 2023</time><div><h3>Quality Assurance and Process Improvement Analyst, Co-op <span>at Elite Mobility Mfg.</span></h3><p class="location">Mississauga, Ontario</p><p>Analyzed manufacturing and quality data, supported statistical process control and model validation, and streamlined inspection work to reduce quality check time by 25 percent within two months.</p></div></article>
+        <article class="role"><time datetime="2018-05/2022-06">May 2018 to Jun 2022</time><div><h3>Software Architect and Technical Product Lead <span>at Bismi Services Pvt. Ltd.</span></h3><p class="location">Hyderabad, India · Banking engagements for HSBC Bank and Saudi National Bank</p><p>Translated banking operations and data requirements into service boundaries, API contracts, relational schemas, integration logic, reporting workflows, acceptance criteria, and production support decisions.</p></div></article>
+        <article class="role"><time datetime="2017-09/2018-05">Sep 2017 to May 2018</time><div><h3>Ad Operations Specialist, Campaign Delivery and Quality <span>at Yahoo</span></h3><p class="location">India</p><p>Supported digital campaign setup, delivery monitoring, data quality, reporting, and issue resolution, with careful checks across targeting, creative, tracking, and delivery records.</p></div></article>
+        <article class="role"><time datetime="2015-04/2017-08">Apr 2015 to Aug 2017</time><div><h3>Founder, Product Manager and Operations Lead <span>at Instazop</span></h3><p class="location">Kalaburagi, India</p><p>Built an early online grocery marketplace from concept through launch, managed vendor and delivery operations, supervised eight delivery personnel, and served an average of 20 customers a day in the first month.</p></div></article>
       </div>
     </section>
 
-    <!-- ================= EDUCATION ================= -->
-    <section id="education">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">04 / Education</p>
-          <h2>Education &amp; credentials</h2>
-        </div>
-      </div>
-      <div class="edu-grid reveal">
-        <div class="panel">
-          <h4>Ontario College Graduate Certificate</h4>
-          <h3 style="font-size:1.0625rem;font-weight:600;margin-bottom:6px">AI &amp; Machine Learning</h3>
-          <p style="color:var(--fg-muted);font-size:0.9375rem">Lambton College, Canada · 2022&ndash;2023. Projects in financial-tweet sentiment analysis, news summarization, and credit-card fraud detection.</p>
-        </div>
-        <div class="panel">
-          <h4>Bachelor of Engineering</h4>
-          <h3 style="font-size:1.0625rem;font-weight:600;margin-bottom:6px">Computer Science &amp; Engineering</h3>
-          <p style="color:var(--fg-muted);font-size:0.9375rem">P.D.A. College of Engineering, Gulbarga · 2017.</p>
-        </div>
-        <div class="panel" style="grid-column:1/-1">
-          <h4>Certifications</h4>
-          <div class="chips">
-            <span class="tag">AI in Fintech &mdash; LinkedIn</span>
-            <span class="tag">Blockchain Basics &mdash; LinkedIn</span>
-            <span class="tag">Digital Marketing &mdash; DigitalDeepak</span>
-          </div>
-        </div>
+    <section class="content-section" id="education">
+      <div class="section-head reveal"><div><p class="eyebrow">Education and credentials</p><h2>Technical foundation and product practice</h2></div></div>
+      <div class="education-grid reveal">
+        <div class="panel"><p class="label">Ontario Graduate Certificate</p><h3>Artificial Intelligence and Machine Learning</h3><p>Lambton College, Toronto · Jan 2022 to Aug 2023</p></div>
+        <div class="panel"><p class="label">Bachelor of Engineering</p><h3>Computer Science and Engineering</h3><p>P.D.A. College of Engineering · Completed Jul 2017</p></div>
+        <div class="panel wide"><p class="label">Certifications</p><div class="certs"><span class="cert">Professional Scrum Product Owner I, Scrum.org</span><span class="cert">AI in Fintech Essential Training, LinkedIn Learning, 2023</span></div></div>
       </div>
     </section>
 
-    <!-- ================= CONTACT ================= -->
-    <section id="contact">
-      <div class="contact-card reveal">
-        <p class="eyebrow" style="justify-content:center">05 / Contact</p>
-        <h2>Let&rsquo;s build something worth shipping.</h2>
-        <p>Open to hands-on AI product, innovation, and solutions roles.</p>
-        <div class="contact-actions">
-          <a href="mailto:mohammed@omershaik.com" class="btn btn-primary">mohammed@omershaik.com</a>
-          <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">GitHub &rarr;</a>
-          <a href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn &rarr;</a>
-        </div>
-      </div>
+    <section class="content-section" id="contact">
+      <div class="contact-card reveal"><p class="eyebrow">Contact</p><h2>Have an operating problem worth solving?</h2><p>I am open to AI product, technical product, solutions architecture, applied AI, and automation roles.</p><div class="contact-actions"><a class="btn btn-primary" href="mailto:mohammed@omershaik.com">mohammed@omershaik.com</a><a class="btn btn-secondary" href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn-secondary" href="https://github.com/omershaik" target="_blank" rel="noopener">GitHub</a></div></div>
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <div class="wrap foot-inner">
-      <span class="mono">© 2026 Mohammed Omer Shaik</span>
-      <div class="foot-links">
-        <a href="mailto:mohammed@omershaik.com">Email</a>
-        <a href="https://github.com/omershaik" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/omershaik" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#top">Back to top</a>
-      </div>
-      <a href="https://github.com/omershaik" target="_blank" rel="noopener" class="mono">Projects and source on GitHub</a>
-    </div>
-  </footer>
+  <footer><div class="wrap footer-inner"><p class="mono">© 2026 Mohammed Omer Shaik</p><div class="footer-links"><a href="Mohammed_Omer_Shaik_Resume.pdf" download>Résumé</a><a href="mailto:mohammed@omershaik.com">Email</a><a href="https://github.com/omershaik" target="_blank" rel="noopener">GitHub</a><a href="#top">Back to top</a></div></div></footer>
 
   <script>
     (function () {
-      var t = document.querySelector('.nav-toggle'), m = document.querySelector('.nav-links');
-      if (t && m) {
-        t.addEventListener('click', function () {
-          var open = m.classList.toggle('open');
-          t.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        m.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () { m.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); });
-        });
-      }
+      var button = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.nav-links');
+      if (!button || !nav) return;
+      function closeMenu() { nav.classList.remove('open'); button.setAttribute('aria-expanded','false'); button.setAttribute('aria-label','Open navigation'); }
+      button.addEventListener('click', function () { var open = nav.classList.toggle('open'); button.setAttribute('aria-expanded',open ? 'true' : 'false'); button.setAttribute('aria-label',open ? 'Close navigation' : 'Open navigation'); });
+      nav.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', closeMenu); });
+      document.addEventListener('keydown', function (event) { if (event.key === 'Escape') closeMenu(); });
     })();
     (function () {
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var els = document.querySelectorAll('.reveal');
-      if (reduce || !('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-      els.forEach(function (e) { io.observe(e); });
+      var items = document.querySelectorAll('.reveal');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion || !('IntersectionObserver' in window)) { items.forEach(function (item) { item.classList.add('in'); }); return; }
+      var observer = new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('in'); observer.unobserve(entry.target); } }); }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+      items.forEach(function (item) { observer.observe(item); });
     })();
   </script>
 </body>
